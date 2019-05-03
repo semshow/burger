@@ -1,0 +1,302 @@
+@charset "UTF-8";
+.intro {
+  width: 100%;
+  height: 100vh;
+  background: url(../../img/background.jpg) center no-repeat;
+  background-size: cover;
+  padding-top: 13px;
+}
+
+.intro .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro .header .header__logo {
+  width: 92px;
+  height: 69px;
+  margin-right: 65px;
+}
+
+.intro .header .header__logo-pic {
+  width: 100%;
+  height: 100%;
+}
+
+.intro .header .header__menu {
+  width: 680px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.intro .header .header__menu .header__menu-list {
+  list-style-type: circle;
+}
+
+.intro .header .header__menu .header__menu-list .header__menu-item {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.intro .header .header__menu .header__menu-list .header__menu-item:after {
+  color: white;
+  content: '•';
+  padding-left: 11px;
+}
+
+.intro .header .header__menu .header__menu-list .header__menu-item:last-child {
+  margin-right: 0;
+}
+
+.intro .header .header__menu .header__menu-list .header__menu-item:last-child:after {
+  content: '';
+  padding-left: 0;
+}
+
+.intro .header .header__menu .header__menu-list .header__menu-link {
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 2.31;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.intro .header .header__order {
+  width: 97px;
+  margin-right: 17px;
+}
+
+.intro .header .header__order .header__order-button {
+  display: inline-block;
+  width: 97px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #e45028;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 35px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.title, .slider__main .slider__main-block .slider__slogan .title--slider {
+  font-family: 'gagalin', sans-serif;
+  font-size: 72px;
+  font-weight: normal;
+  letter-spacing: normal;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'gagalin';
+  src: url("../../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lifehack';
+  src: url("../../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../../fonts/lifehack_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.slider__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 510px;
+}
+
+.slider__main .slider__main-block {
+  position: relative;
+  width: 940px;
+}
+
+.slider__main .slider__main-block .slider__img {
+  position: absolute;
+  top: -3px;
+  left: 19px;
+}
+
+.slider__main .slider__main-block .slider__slogan {
+  position: absolute;
+  top: 135px;
+  right: 48px;
+}
+
+.slider__main .slider__main-block .slider__slogan .title--slider {
+  color: #f9b43b;
+  margin-bottom: 15px;
+}
+
+.slider__main .slider__main-block .slider__slogan .slider__slogan-second {
+  font-family: 'Lifehack', sans-serif;
+  font-size: 65px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1em;
+  letter-spacing: -1.6px;
+  color: #ffffff;
+}
+
+.slider__main .slider__main-menu .slider__menu-list {
+  list-style-type: none;
+  padding-top: 10px;
+  margin-right: -14px;
+}
+
+.slider__main .slider__main-menu .slider__menu-list .slider__menu-item {
+  margin-bottom: 5px;
+}
+
+.slider__main .slider__main-menu .slider__menu-list .slider__menu-item .slider__link {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: solid 1px transparent;
+  border-radius: 50%;
+  position: relative;
+}
+
+.slider__main .slider__main-menu .slider__menu-list .slider__menu-item .slider__link--active {
+  border: solid 1px #ffffff;
+}
+
+.slider__main .slider__main-menu .slider__menu-list .slider__menu-item .slider__link .slider__link-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.slider__triangle {
+  width: 29px;
+  margin: 0 auto;
+}
+
+.features {
+  height: 100vh;
+  background: url(../../img/best_bg.jpg) center no-repeat;
+  background-size: cover;
+  padding-top: 135px;
+}
+
+.features .features__title {
+  width: 385px;
+  margin: 0 auto;
+  margin-bottom: 41px;
+}
+
+.features .features__title .title--features {
+  color: #2f3234;
+}
+
+.features .features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.features .features__list .features__item {
+  width: 285px;
+}
+
+.features .features__list .features__item .features__item-icon {
+  width: 97px;
+  height: 89px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 33px;
+}
+
+.features .features__list .features__item .features__item-title {
+  font-family: 'Lifehack', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  color: #2f3234;
+  margin-bottom: 14px;
+}
+
+.features .features__list .features__item .features__item-text {
+  opacity: 0.8;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  line-height: 1.71;
+  color: rgba(47, 50, 52, 0.8);
+}
+
+.reviews {
+  font-size: 0;
+  height: 100vh;
+}
+
+.reviews .reviews__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.reviews .reviews__list .reviews__item {
+  width: 25%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.reviews .reviews__list .reviews__item .reviews__pic {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+/*# sourceMappingURL=style.css.map */

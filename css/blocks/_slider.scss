@@ -1,0 +1,80 @@
+.slider__main {
+  display: flex;
+  justify-content: space-between;
+  min-height: 510px;
+
+  .slider__main-block {
+    position: relative;
+    width: 940px;
+
+    .slider__img {
+      position: absolute;
+      top: -3px;
+      left: 19px;
+    }
+
+    .slider__slogan {
+      position: absolute;
+      top: 135px;
+      right: 48px;
+
+      .title--slider {
+        @extend .title;
+        color: #f9b43b;
+        margin-bottom: 15px;
+      }
+
+      .slider__slogan-second {
+        font-family: 'Lifehack', sans-serif;
+        font-size: 65px;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1em;
+        letter-spacing: -1.6px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .slider__main-menu {
+    .slider__menu-list {
+      list-style-type: none;
+      padding-top: 10px;
+      margin-right: -14px;
+
+      .slider__menu-item {
+        margin-bottom: 5px;
+
+        .slider__link {
+          display: block;
+          width: 16px;
+          height: 16px;
+          border: solid 1px transparent;
+          border-radius: 50%;
+          position: relative;
+
+          &--active {
+            border: solid 1px #ffffff;
+          }
+
+          .slider__link-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: #ffffff;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slider__triangle {
+  width: 29px;
+  margin: 0 auto;
+}

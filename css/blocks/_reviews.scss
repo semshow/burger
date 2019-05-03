@@ -1,0 +1,24 @@
+.reviews {
+  font-size: 0;
+  height: 100vh;
+
+  .reviews__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+
+    .reviews__item {
+      width: 25%;
+      height: 50%;
+      overflow: hidden;
+
+      .reviews__pic {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        filter: grayscale(100%);
+      }
+    }
+  }
+}
