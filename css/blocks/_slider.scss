@@ -11,6 +11,10 @@
       position: absolute;
       top: -3px;
       left: 19px;
+      .slider__pic {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
 
     .slider__slogan {
@@ -20,7 +24,7 @@
 
       .title--slider {
         @extend .title;
-        color: #f9b43b;
+        color: $yellow;
         margin-bottom: 15px;
       }
 
@@ -31,7 +35,7 @@
         font-style: normal;
         line-height: 1em;
         letter-spacing: -1.6px;
-        color: #ffffff;
+        color: $white;
       }
     }
   }
@@ -57,7 +61,7 @@
         position: relative;
 
         &--active {
-          border: solid 1px #ffffff;
+          border: solid 1px $white;
         }
 
         .slider__link-circle {
@@ -68,7 +72,7 @@
           display: block;
           width: 6px;
           height: 6px;
-          background-color: #ffffff;
+          background-color: $white;
           border-radius: 50%;
         }
       }

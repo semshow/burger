@@ -1,6 +1,5 @@
 .reviews {
   font-size: 0;
-  height: 100vh;
 
   .reviews__list {
     display: flex;
@@ -10,13 +9,14 @@
     .reviews__item {
       position: relative;
       width: 25%;
-      height: 50%;
+      height: 50vh;
       overflow: hidden;
 
       .reviews__pic {
         object-fit: cover;
-        width: 100%;
-        height: auto;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100%;
         filter: grayscale(100%);
       }
 
@@ -39,7 +39,7 @@
             font-weight: normal;
             font-style: normal;
             text-align: left;
-            color: #ffffff;
+            color: $white;
             padding-top: 50px;
             padding-left: 20px;
             margin-bottom: 30px;
@@ -52,7 +52,7 @@
             font-style: normal;
             line-height: 1.71;
             text-align: left;
-            color: #ffffff;
+            color: $white;
             margin-bottom: 17px;
           }
 
@@ -62,13 +62,13 @@
             width: 110px;
             height: 35px;
             border-radius: 5px;
-            background-color: #2f3234;
+            background-color: $gray;
             font-family: 'Ubuntu', sans-serif;
             font-size: 13px;
             font-weight: 500;
             font-style: normal;
             line-height: 35px;
-            color: #ffffff;
+            color: $white;
             text-transform: uppercase;
             text-decoration: none;
           }
