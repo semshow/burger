@@ -1,34 +1,35 @@
-.slider__main {
+.intro__main {
   display: flex;
   justify-content: space-between;
   min-height: 510px;
 
-  .slider__main-block {
+  .intro__main-block {
     position: relative;
     width: 940px;
 
-    .slider__img {
+    .intro__img {
       position: absolute;
       top: -3px;
       left: 19px;
-      .slider__pic {
+
+      .intro__pic {
         max-width: 100%;
         max-height: 100%;
       }
     }
 
-    .slider__slogan {
+    .intro__slogan {
       position: absolute;
       top: 135px;
       right: 48px;
 
-      .title--slider {
+      .title--intro {
         @extend .title;
         color: $yellow;
         margin-bottom: 15px;
       }
 
-      .slider__slogan-second {
+      .intro__slogan-second {
         font-family: 'Lifehack', sans-serif;
         font-size: 65px;
         font-weight: 500;
@@ -40,19 +41,22 @@
     }
   }
 }
-.slider__main-menu {
+
+.intro__main-menu {
   position: fixed;
-  right: 173px;
-  top: 82px;
-  .slider__menu-list {
+  right: 10%;
+  top: 10%;
+  z-index: 10;
+
+  .intro__menu-list {
     list-style-type: none;
     padding-top: 10px;
     margin-right: -14px;
 
-    .slider__menu-item {
+    .intro__menu-item {
       margin-bottom: 5px;
 
-      .slider__link {
+      .intro__link {
         display: block;
         width: 16px;
         height: 16px;
@@ -64,7 +68,7 @@
           border: solid 1px $white;
         }
 
-        .slider__link-circle {
+        .intro__link-circle {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -80,7 +84,7 @@
   }
 }
 
-.slider__triangle {
+.intro__triangle {
   width: 29px;
   margin: 0 auto;
 }

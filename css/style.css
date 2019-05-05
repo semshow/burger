@@ -1,12 +1,12 @@
 @charset "UTF-8";
-.intro {
+.head {
   width: 100%;
   background: url(../img/background.jpg) center no-repeat;
   background-size: cover;
   padding-top: 13px;
 }
 
-.intro .header {
+.head .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,47 +18,47 @@
           align-items: center;
 }
 
-.intro .header .header__logo {
+.head .header .header__logo {
   width: 92px;
   height: 69px;
   margin-right: 65px;
 }
 
-.intro .header .header__logo-pic {
+.head .header .header__logo-pic {
   max-width: 100%;
   max-height: 100%;
 }
 
-.intro .header .header__menu {
+.head .header .header__menu {
   width: 680px;
   font-family: 'Ubuntu', sans-serif;
 }
 
-.intro .header .header__menu .header__menu-list {
+.head .header .header__menu .header__menu-list {
   list-style-type: circle;
 }
 
-.intro .header .header__menu .header__menu-list .header__menu-item {
+.head .header .header__menu .header__menu-list .header__menu-item {
   display: inline-block;
   margin-right: 12px;
 }
 
-.intro .header .header__menu .header__menu-list .header__menu-item:after {
+.head .header .header__menu .header__menu-list .header__menu-item:after {
   color: #ffffff;
   content: '•';
   padding-left: 11px;
 }
 
-.intro .header .header__menu .header__menu-list .header__menu-item:last-child {
+.head .header .header__menu .header__menu-list .header__menu-item:last-child {
   margin-right: 0;
 }
 
-.intro .header .header__menu .header__menu-list .header__menu-item:last-child:after {
+.head .header .header__menu .header__menu-list .header__menu-item:last-child:after {
   content: '';
   padding-left: 0;
 }
 
-.intro .header .header__menu .header__menu-list .header__menu-link {
+.head .header .header__menu .header__menu-list .header__menu-link {
   font-size: 13px;
   font-weight: 500;
   font-style: normal;
@@ -69,12 +69,12 @@
   text-decoration: none;
 }
 
-.intro .header .header__order {
+.head .header .header__order {
   width: 97px;
   margin-right: 17px;
 }
 
-.intro .header .header__order .header__order-button {
+.head .header .header__order .header__order-button {
   display: inline-block;
   width: 97px;
   height: 35px;
@@ -92,7 +92,7 @@
   line-height: 35px;
 }
 
-.intro .header .header__order .header__order-button:hover {
+.head .header .header__order .header__order-button:hover {
   background-color: #c1401e;
 }
 
@@ -108,7 +108,7 @@
   margin: 0 auto;
 }
 
-.title, .slider__main .slider__main-block .slider__slogan .title--slider {
+.title, .intro__main .intro__main-block .intro__slogan .title--intro {
   font-family: 'gagalin', sans-serif;
   font-size: 72px;
   font-weight: normal;
@@ -135,7 +135,7 @@ section {
   font-style: normal;
 }
 
-.slider__main {
+.intro__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,34 +145,34 @@ section {
   min-height: 510px;
 }
 
-.slider__main .slider__main-block {
+.intro__main .intro__main-block {
   position: relative;
   width: 940px;
 }
 
-.slider__main .slider__main-block .slider__img {
+.intro__main .intro__main-block .intro__img {
   position: absolute;
   top: -3px;
   left: 19px;
 }
 
-.slider__main .slider__main-block .slider__img .slider__pic {
+.intro__main .intro__main-block .intro__img .intro__pic {
   max-width: 100%;
   max-height: 100%;
 }
 
-.slider__main .slider__main-block .slider__slogan {
+.intro__main .intro__main-block .intro__slogan {
   position: absolute;
   top: 135px;
   right: 48px;
 }
 
-.slider__main .slider__main-block .slider__slogan .title--slider {
+.intro__main .intro__main-block .intro__slogan .title--intro {
   color: #f9b43b;
   margin-bottom: 15px;
 }
 
-.slider__main .slider__main-block .slider__slogan .slider__slogan-second {
+.intro__main .intro__main-block .intro__slogan .intro__slogan-second {
   font-family: 'Lifehack', sans-serif;
   font-size: 65px;
   font-weight: 500;
@@ -182,23 +182,24 @@ section {
   color: #ffffff;
 }
 
-.slider__main-menu {
+.intro__main-menu {
   position: fixed;
-  right: 173px;
-  top: 82px;
+  right: 10%;
+  top: 10%;
+  z-index: 10;
 }
 
-.slider__main-menu .slider__menu-list {
+.intro__main-menu .intro__menu-list {
   list-style-type: none;
   padding-top: 10px;
   margin-right: -14px;
 }
 
-.slider__main-menu .slider__menu-list .slider__menu-item {
+.intro__main-menu .intro__menu-list .intro__menu-item {
   margin-bottom: 5px;
 }
 
-.slider__main-menu .slider__menu-list .slider__menu-item .slider__link {
+.intro__main-menu .intro__menu-list .intro__menu-item .intro__link {
   display: block;
   width: 16px;
   height: 16px;
@@ -207,11 +208,11 @@ section {
   position: relative;
 }
 
-.slider__main-menu .slider__menu-list .slider__menu-item .slider__link--active {
+.intro__main-menu .intro__menu-list .intro__menu-item .intro__link--active {
   border: solid 1px #ffffff;
 }
 
-.slider__main-menu .slider__menu-list .slider__menu-item .slider__link .slider__link-circle {
+.intro__main-menu .intro__menu-list .intro__menu-item .intro__link .intro__link-circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -224,7 +225,7 @@ section {
   border-radius: 50%;
 }
 
-.slider__triangle {
+.intro__triangle {
   width: 29px;
   margin: 0 auto;
 }
@@ -378,6 +379,10 @@ section {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.reviews .reviews__list .reviews__item .reviews__item-description .reviews__item-content .reviews__item-button:hover {
+  background-color: #1f2122;
 }
 
 .reviews .reviews__list .reviews__item:hover .reviews__item-description {
