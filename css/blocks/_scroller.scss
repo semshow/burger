@@ -1,0 +1,41 @@
+.scroller {
+  position: fixed;
+  right: 10%;
+  top: 10%;
+  z-index: 10;
+
+  .scroller__list {
+    list-style-type: none;
+    padding-top: 10px;
+    margin-right: -14px;
+
+    .scroller__item {
+      margin-bottom: 5px;
+
+      .scroller__link {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: solid 1px transparent;
+        border-radius: 50%;
+        position: relative;
+
+        &--active {
+          border: solid 1px $white;
+        }
+
+        .scroller__link-circle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: block;
+          width: 6px;
+          height: 6px;
+          background-color: $white;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

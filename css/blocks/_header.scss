@@ -1,7 +1,12 @@
+.header__buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .head {
   width: 100%;
-  background: url(../img/background.jpg) center no-repeat;
-  background-size: cover;
+  background: url(../img/background.jpg) center center / cover no-repeat;
   padding-top: 13px;
 
   .header {
@@ -12,12 +17,7 @@
     .header__logo {
       width: 92px;
       height: 69px;
-      margin-right: 65px;
-    }
-
-    .header__logo-pic {
-      max-width: 100%;
-      max-height: 100%;
+      margin-right: 69px;
     }
 
     .header__menu {
@@ -61,30 +61,32 @@
     }
 
 
-    .header__order {
-      width: 97px;
-      margin-right: 17px;
 
-      .header__order-button {
-        display: inline-block;
-        width: 97px;
-        height: 35px;
-        border-radius: 5px;
-        background-color: $red;
-        text-decoration: none;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 13px;
-        font-weight: 500;
-        font-style: normal;
-        letter-spacing: normal;
-        text-align: center;
-        color: $white;
-        text-transform: uppercase;
-        line-height: 35px;
-      }
-      .header__order-button:hover {
-        background-color: #c1401e;
-      }
+    .btn {
+      display: inline-block;
+      height: 35px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 5px;
+      background-color: $red;
+      text-decoration: none;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: $white;
+      text-transform: uppercase;
+      line-height: 35px;
+    }
+
+    .header__order-btn {
+      margin-left: 7px;
+    }
+
+    .header__order-btn:hover {
+      background-color: #c1401e;
     }
   }
 }

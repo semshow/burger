@@ -1,11 +1,55 @@
+html, body {
+  height: 100;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 940px + 20px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  & > li {
+    list-style-type: none;
+  }
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
 .container {
-  width: 960px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 940px;
   margin: 0 auto;
 }
 
@@ -17,7 +61,7 @@
   margin: 0;
 }
 
-section {
+.section {
   height: 100vh;
   min-height: 650px;
 }
