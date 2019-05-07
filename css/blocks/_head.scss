@@ -18,12 +18,6 @@ position: relative;
   top: 124px;
   right: 49px;
 
-  .title--intro {
-    @extend .title;
-    color: $yellow;
-    margin-bottom: 7px;
-  }
-
   .head__content-description {
     font-family: 'Lifehack', sans-serif;
     font-size: 65px;
@@ -33,6 +27,9 @@ position: relative;
     letter-spacing: -1.6px;
     color: $white;
   }
+}
+.title--intro {
+  margin-bottom: 7px;
 }
 
 .head__triangle {

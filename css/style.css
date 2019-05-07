@@ -1,4 +1,94 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'gagalin';
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lifehack';
+  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 960px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul > li {
+  list-style-type: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: 'gagalin', sans-serif;
+  color: #f9b43b;
+  font-size: 72px;
+  font-weight: normal;
+  letter-spacing: normal;
+  margin: 0;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+}
+
 .header__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,93 +192,116 @@
   background-color: #c1401e;
 }
 
-html, body {
-  height: 100;
-}
-
-body {
-  font-size: 16px;
-  line-height: 1.42;
-  -webkit-font-smoothing: antialiased;
+.team {
   position: relative;
+  background: url(../img/team.jpg) center center/cover no-repeat;
 }
 
-.wrapper {
-  position: relative;
-  width: 100%;
-  min-width: 960px;
-  min-height: 100%;
-  overflow: hidden;
+.team__content {
+  padding-top: 113px;
+  padding-left: 97px;
+  padding-right: 98px;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(44, 47, 49, 0.9);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
+.title--team {
+  margin-bottom: 46px;
+}
+
+.accordeon__item--active .accordeon__link {
+  color: #f9b43b;
+}
+
+.accordeon__item--active .accordeon__item-description {
+  height: 100px;
+  margin-bottom: 40px;
+}
+
+.accordeon__link {
+  font-family: 'Gagalin', sans-serif;
+  font-size: 14px;
   font-weight: normal;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-ul > li {
-  list-style-type: none;
-}
-
-p {
-  padding: 0;
-  margin: 0;
-}
-
-footer {
+  font-style: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 17px;
+  padding-left: 30px;
   position: relative;
-  width: 100%;
 }
 
-.container {
-  position: relative;
+.accordeon__link:before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #f9b43b;
+}
+
+.accordeon__item--active .accordeon__link:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #f9b43b;
+}
+
+.accordeon__item-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  width: 940px;
-  margin: 0 auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 0;
+  overflow: hidden;
 }
 
-.title, .head__content-text .title--intro {
-  font-family: 'gagalin', sans-serif;
-  font-size: 72px;
-  font-weight: normal;
+.accordeon__item-text {
+  width: 208px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.71;
   letter-spacing: normal;
-  margin: 0;
+  color: #ffffff;
 }
 
-.section {
-  height: 100vh;
-  min-height: 650px;
+.accordeon__item-text .accordeon__item-title {
+  font-weight: 500;
 }
 
-@font-face {
-  font-family: 'gagalin';
-  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+.accordeon__item-img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 21px;
 }
 
-@font-face {
-  font-family: 'lifehack';
-  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+.accordeon__item-pic {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .head__content {
@@ -212,11 +325,6 @@ footer {
   right: 49px;
 }
 
-.head__content-text .title--intro {
-  color: #f9b43b;
-  margin-bottom: 7px;
-}
-
 .head__content-text .head__content-description {
   font-family: 'Lifehack', sans-serif;
   font-size: 65px;
@@ -225,6 +333,10 @@ footer {
   line-height: 1em;
   letter-spacing: -1.6px;
   color: #ffffff;
+}
+
+.title--intro {
+  margin-bottom: 7px;
 }
 
 .head__triangle {
