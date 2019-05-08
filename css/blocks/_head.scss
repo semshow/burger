@@ -34,8 +34,6 @@ position: relative;
 
 .head__triangle {
   display: block;
-  width: 29px;
-  height: 14px;
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -44,6 +42,6 @@ position: relative;
 }
 
 .head__triangle-pic {
-  max-width: 29px;
-  max-height: 14px;
+  width: 29px;
+  height: 14px;
 }
