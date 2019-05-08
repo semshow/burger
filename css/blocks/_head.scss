@@ -33,11 +33,17 @@ position: relative;
 }
 
 .head__triangle {
+  display: block;
+  width: 29px;
+  height: 14px;
   position: absolute;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  display: block;
-  width: 29px;
   margin: 0 auto;
+}
+
+.head__triangle-pic {
+  max-width: 29px;
+  max-height: 14px;
 }

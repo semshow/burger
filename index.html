@@ -17,7 +17,9 @@
     <section class="section head">
       <div class="container">
         <header class="header">
-          <img class="header__logo" src="img/logo.png" alt="Mr Burger">
+          <svg class="header__logo">
+            <use xlink:href="img/icons/sprite.svg#logo"></use>
+          </svg>
           <div class="header__buttons">
             <nav class="header__menu">
               <ul class="header__menu-list">
@@ -78,7 +80,10 @@
         </div>
 
         <a href="#" class="head__triangle">
-          <img src="img/icons/arrow-scroll.svg" alt="next screen">
+          <svg class="head__triangle-pic">
+            <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
+          </svg>
+          <!-- <img src="img/icons/arrow-scroll.svg" alt="next screen"> -->
         </a>
       </div>
     </section>
@@ -403,6 +408,12 @@
           </div>
         </ll>
       </ul>
+    </section>
+
+    <section>
+      <svg class="beef">
+        <use xlink:href="img/icons/sprite.svg#beef"></use>
+      </svg>
     </section>
   </div>
 </body>
