@@ -254,8 +254,6 @@ footer {
   display: flex;
   min-width: 80px;
   height: 100%;
-  position: relative;
-  display: flex;
   overflow: hidden; }
 
 .menu--meat {
@@ -269,7 +267,7 @@ footer {
 
 .menu__accordeon-top {
   background-color: rgba(62, 60, 60, 0.8);
-  width: 80px;
+  min-width: 80px;
   position: relative; }
 
 .menu__accordeon-title {
@@ -463,6 +461,64 @@ footer {
 
 .reviews__item:hover .reviews__item-description {
   opacity: 1; }
+
+.map {
+  background: url(../img/map.jpg) center center/cover no-repeat;
+  position: relative; }
+
+.footer {
+  width: 100%;
+  min-height: 60px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #151515;
+  display: flex;
+  flex: 1;
+  align-items: center; }
+
+.map__container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 940px; }
+
+.footer__contacts {
+  width: 50%; }
+
+.footer__social {
+  text-align: right;
+  width: 50%; }
+
+.footer__contacts-adress, .footer__contacts-phone {
+  display: block;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff; }
+
+.footer__contacts-phone {
+  display: block;
+  font-weight: bold;
+  color: #e45028; }
+
+.footer__social-pic {
+  max-width: 23px;
+  max-height: 20px;
+  fill: #ffffff;
+  fill-opacity: 0.3; }
+  .footer__social-pic:hover {
+    fill-opacity: 1; }
+
+.footer__social-link {
+  margin-right: 20px; }
+  .footer__social-link:last-child {
+    margin-right: 0; }
 
 .scroller {
   position: fixed;

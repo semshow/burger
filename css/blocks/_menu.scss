@@ -16,10 +16,7 @@
   display: flex;
   min-width: 80px;
   height: 100%;
-  position: relative;
-  display: flex;
   overflow: hidden;
-
 }
 
 .menu--meat {
@@ -37,7 +34,7 @@
 
 .menu__accordeon-top {
   background-color: rgba($color: #3e3c3c, $alpha: 0.8);
-  width: 80px;
+  min-width: 80px;
   position: relative;
 }
 
