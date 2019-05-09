@@ -15,14 +15,8 @@
   background-color: rgba($color: #2c2f31, $alpha: 0.9)
 }
 
-.title--team {
-  margin-bottom: 46px;
-}
-
-.accordeon__item--active {
-  .accordeon__link {
-    color: $yellow;
-  }
+.accordeon__link {
+  color: $yellow;
 }
 
 .accordeon__item--active .accordeon__item-description {
@@ -86,12 +80,11 @@
   line-height: 1.71;
   letter-spacing: normal;
   color: $white;
-
-  .accordeon__item-title {
-    font-weight: 500;
-  }
 }
 
+.accordeon__item-title {
+  font-weight: 500;
+}
 
 .accordeon__item-img {
   flex-shrink: 0;
