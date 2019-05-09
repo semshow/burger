@@ -1,6 +1,12 @@
-@import 'blocks/header';
-@import 'layout/base';
 @import 'layout/fonts';
-@import 'blocks/slider';
+@import 'sass/variables';
+@import 'layout/base';
+
+@import 'blocks/header';
+@import 'blocks/team';
+@import 'blocks/menu';
+@import 'blocks/head';
 @import 'blocks/features';
 @import 'blocks/reviews';
+@import 'blocks/scroller';
+

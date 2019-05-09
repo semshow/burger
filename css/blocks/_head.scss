@@ -1,0 +1,42 @@
+.head__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin-bottom: 15%;
+}
+
+.head__content-pic {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.head__content-text {
+  padding-top: 8%;
+}
+
+.head__content-description {
+  font-family: 'Lifehack', sans-serif;
+  font-size: 65px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1em;
+  letter-spacing: -1.6px;
+  color: $white;
+}
+
+.head__triangle {
+  display: block;
+  width: 29px;
+  height: 14px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+}
+
+.head__triangle-pic {
+  max-width: 100%;
+  max-height: 100%;
+}
