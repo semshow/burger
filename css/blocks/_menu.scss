@@ -1,0 +1,74 @@
+.menu {
+  background: url(../img/menu.jpg) center center / cover no-repeat;
+  position: relative;
+}
+
+.title--menu {
+  color: $white;
+  padding-top: 111px;
+  padding-left: 102px;
+}
+
+.menu__accordeon {
+  display: flex;
+  min-width: 240px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.menu__accordeon-item {
+  display: flex;
+  min-width: 80px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.menu--meat {
+  background: url(../img/menu1.jpg) center center / cover no-repeat;
+}
+
+.menu--veg {
+  background: url(../img/menu2.jpg) center center / cover no-repeat;
+}
+
+.menu--diet {
+  background: url(../img/menu3.jpg) center center / cover no-repeat;
+}
+
+
+.menu__accordeon-top {
+  background-color: rgba($color: #3e3c3c, $alpha: 0.8);
+  width: 80px;
+  position: relative;
+}
+
+.menu__accordeon-title {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform-origin: 0 0;
+  color: $white;
+  font-size: 40px;
+  transform: rotate(-90deg) translateY(-50%);
+  white-space: nowrap;
+}
+
+.menu__accordeon-hide {
+  background-color: rgba($color: #3e3c3c, $alpha: 0.7);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 61px;
+  padding-top: 35px;
+  color: $white;
+  overflow: hidden;
+  width: 0;
+}
+
+.menu__accordeon-item:hover .menu__accordeon-hide {
+  width: 540px;
+}
