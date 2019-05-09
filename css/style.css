@@ -75,6 +75,10 @@ footer {
     margin-bottom: 7px; }
   .title--team {
     margin-bottom: 46px; }
+  .title--menu {
+    color: #ffffff;
+    padding-top: 111px;
+    padding-left: 102px; }
 
 .section {
   height: 100vh;
@@ -238,11 +242,6 @@ footer {
   background: url(../img/menu.jpg) center center/cover no-repeat;
   position: relative; }
 
-.title--menu {
-  color: #ffffff;
-  padding-top: 111px;
-  padding-left: 102px; }
-
 .menu__accordeon {
   display: flex;
   min-width: 240px;
@@ -284,11 +283,12 @@ footer {
   white-space: nowrap; }
 
 .menu__accordeon-hide {
+  display: flex;
+  justify-content: center;
   background-color: rgba(62, 60, 60, 0.7);
   font-family: 'Ubuntu', sans-serif;
   font-size: 14px;
   line-height: 24px;
-  padding-left: 61px;
   padding-top: 35px;
   color: #ffffff;
   overflow: hidden;
@@ -296,6 +296,9 @@ footer {
 
 .menu__accordeon-item:hover .menu__accordeon-hide {
   width: 540px; }
+
+.menu__accordeon-item:hover .menu__accordeon-title {
+  color: #f9b43b; }
 
 .head__content {
   display: flex;

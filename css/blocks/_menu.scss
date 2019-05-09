@@ -3,12 +3,6 @@
   position: relative;
 }
 
-.title--menu {
-  color: $white;
-  padding-top: 111px;
-  padding-left: 102px;
-}
-
 .menu__accordeon {
   display: flex;
   min-width: 240px;
@@ -25,6 +19,7 @@
   position: relative;
   display: flex;
   overflow: hidden;
+
 }
 
 .menu--meat {
@@ -58,11 +53,13 @@
 }
 
 .menu__accordeon-hide {
+  display: flex;
+  justify-content: center;
   background-color: rgba($color: #3e3c3c, $alpha: 0.7);
   font-family: 'Ubuntu', sans-serif;
   font-size: 14px;
   line-height: 24px;
-  padding-left: 61px;
+  // padding-left: 61px;
   padding-top: 35px;
   color: $white;
   overflow: hidden;
@@ -71,4 +68,8 @@
 
 .menu__accordeon-item:hover .menu__accordeon-hide {
   width: 540px;
+}
+
+.menu__accordeon-item:hover .menu__accordeon-title {
+  color: $yellow;
 }

@@ -59,6 +59,7 @@ footer {
   max-width: 940px;
   min-width: 320px;
   margin: 0 auto;
+
   &--features {
     justify-content: center;
   }
@@ -82,6 +83,12 @@ footer {
 
   &--team {
     margin-bottom: 46px;
+  }
+
+  &--menu {
+    color: $white;
+    padding-top: 111px;
+    padding-left: 102px;
   }
 }
 
