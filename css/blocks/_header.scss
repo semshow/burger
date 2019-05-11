@@ -8,83 +8,64 @@
   width: 100%;
   background: url(../img/background.jpg) center center / cover no-repeat;
   padding-top: 13px;
+}
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .header__logo {
-      width: 92px;
-      height: 69px;
-      margin-right: 69px;
-    }
+.header__logo {
+  width: 92px;
+  height: 69px;
+  margin-right: 69px;
+}
 
-    .header__menu {
-      width: 680px;
-      font-family: 'Ubuntu', sans-serif;
+.header__menu {
+  width: 680px;
+  font-family: 'Ubuntu', sans-serif;
+}
 
-      .header__menu-list {
-        list-style-type: circle;
+.header__menu-list {
+  list-style-type: circle;
+}
 
-        .header__menu-item {
-          display: inline-block;
-          margin-right: 12px;
+.header__menu-item {
+  display: inline-block;
+  margin-right: 12px;
 
-          &:after {
-            color: $white;
-            content: '•';
-            padding-left: 11px;
-          }
+  &:after {
+    color: $white;
+    content: '•';
+    padding-left: 11px;
+  }
 
-          &:last-child {
-            margin-right: 0;
+  &:last-child {
+    margin-right: 0;
 
-            &:after {
-              content: '';
-              padding-left: 0;
-            }
-          }
-        }
-
-        .header__menu-link {
-          font-size: 13px;
-          font-weight: 500;
-          font-style: normal;
-          line-height: 2.31;
-          letter-spacing: normal;
-          color: $white;
-          text-transform: uppercase;
-          text-decoration: none;
-        }
-      }
-    }
-
-    .btn {
-      display: inline-block;
-      height: 35px;
-      padding-left: 15px;
-      padding-right: 15px;
-      border-radius: 5px;
-      background-color: $red;
-      text-decoration: none;
-      font-family: 'Ubuntu', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      font-style: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: $white;
-      text-transform: uppercase;
-      line-height: 35px;
-    }
-
-    .header__order-btn {
-      margin-left: 7px;
-    }
-
-    .header__order-btn:hover {
-      background-color: #c1401e;
+    &:after {
+      content: '';
+      padding-left: 0;
     }
   }
+}
+
+.header__menu-link {
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 2.31;
+  letter-spacing: normal;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header__order-btn {
+  margin-left: 7px;
+}
+
+.btn:hover {
+  background-color: #c1401e;
 }

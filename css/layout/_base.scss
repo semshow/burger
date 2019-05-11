@@ -63,6 +63,11 @@ footer {
   &--features {
     justify-content: center;
   }
+
+  &--form {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .title {
@@ -90,10 +95,45 @@ footer {
     padding-top: 111px;
     padding-left: 102px;
   }
+
+  &--form {
+    margin-bottom: 25px;
+  }
 }
 
 
 .section {
   height: 100vh;
   min-height: 650px;
+}
+
+.btn {
+  display: inline-block;
+  height: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  background-color: $red;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  line-height: 35px;
+}
+
+input,
+textarea {
+  outline: none;
+  border: solid 2px transparent;
+
+  &:hover,
+  &:active,
+  &focus {
+    border: solid 2px $yellow;
+  }
 }

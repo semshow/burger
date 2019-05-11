@@ -472,6 +472,83 @@
       </ul>
     </section>
 
+    <section class="section order">
+      <div class="container container--form">
+        <h2 class="title title--form">закажите доставку</h2>
+        <form action="#" method="post" class="order__form">
+          <div class="order__form-text">
+            <div class="order__form-name">
+              <label for="name" class="order__form-nameline">
+                <p> Имя</p>
+                <input id="name" type="text" class="order__form-inputname">
+              </label>
+              <label for="phone" class="phoneline">
+                <p>Телефон</p>
+                <input id="phone" type="text" class="order__form-inputname">
+              </label>
+            </div>
+
+            <label class="order__form-street" for="street">
+              <p>
+                Улица
+              </p>
+              <input id="street" type="text" class="order__form-inputstreet">
+            </label>
+
+            <div class="order__form-houseline">
+
+              <label for="house">
+                <p>Дом</p>
+                <input id="house" type="text" class="order__form-inputhouse">
+              </label>
+
+              <label for="house-block">
+                <p>Корпус</p>
+                <input id="house-block" type="text" class="order__form-inputhouse">
+              </label>
+
+              <label for="apartment">
+                <p>Квартира</p>
+                <input id="apartment" type="text" class="order__form-inputhouse">
+              </label>
+
+              <label for="stage">
+                <p>Этаж</p>
+                <input id="stage" type="text" class="order__form-inputhouse">
+              </label>
+
+            </div>
+          </div>
+          <div class="order__form-checkbox">
+            <p>
+              Комментарий
+            </p>
+            <textarea name="" id="" cols="30" rows="10" class="order__form-textarea"></textarea>
+
+            <p class="order__form-checkboxline">
+              <label for="rest" class="order__form-rest">
+                <input type="radio" name="money" value="cashpayment" id="rest" class="order__form-radio" checked> 
+                <span class="order__form-circleradio"></span>
+                Потребуется сдача
+              </label>
+              <label for="card" class="order__form-rest">
+                <input type="radio" name="money" value="cardpayment" id="card" class="order__form-radio">
+                <span class="order__form-circleradio"></span>
+                Оплата по карте
+              </label>
+            </p>
+              <label for="nocall" class="order__form-nocall">
+                <input type="checkbox" id="nocall" class="order__form-nocallinput">
+                <span class="order__form-arrowcheckbox"></span>
+                Не перезванивать
+              </label>
+            <a href="#" class="btn btn--order">заказать</a>Очистить
+          </div>
+        </form>
+      </div>
+    </section>
+
+
     <section class="map section">
       <footer class="footer">
         <div class="container map__container">
