@@ -10,9 +10,9 @@
 .order__form {
   display: flex;
   justify-content: space-between;
-  width: 940px;
+  width: rem(940);
   font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
+  font-size: rem(14);
   font-weight: 300;
   font-style: normal;
   line-height: 1.71;
@@ -24,7 +24,7 @@
 .order__form-name {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 19px;
+  margin-bottom: rem(19);
 }
 
 .order__form-houseline {
@@ -34,41 +34,41 @@
 
 .order__form-street {
   display: block;
-  margin-bottom: 19px;
+  margin-bottom: rem(19);
 }
 
 .order__form-text {
-  width: 461px;
-  border-radius: 10px;
+  width: rem(461);
+  border-radius: rem(10);
 }
 
 .order__form-inputname {
-  width: 220px;
-  height: 36px;
-  border-radius: 5px;
-  border: solid 1px #d1cfcb;
+  width: rem(220);
+  height: rem(36);
+  border-radius: rem(5);
+  border: solid rem(1) #d1cfcb;
 }
 
 .order__form-inputstreet {
-  width: 460px;
-  height: 36px;
-  border-radius: 5px;
-  border: solid 1px #d1cfcb;
+  width: rem(460);
+  height: rem(36);
+  border-radius: rem(5);
+  border: solid rem(1) #d1cfcb;
 }
 
 .order__form-inputhouse {
-  width: 100px;
-  height: 36px;
-  border-radius: 5px;
-  border: solid 1px #d1cfcb;
+  width: rem(100);
+  height: rem(36);
+  border-radius: rem(5);
+  border: solid rem(1) #d1cfcb;
 }
 
 .order__form-textarea {
-  width: 460px;
-  height: 110px;
-  border-radius: 5px;
-  border: solid 1px #d1cfcb;
-  margin-bottom: 6px;
+  width: rem(460);
+  height: rem(110);
+  border-radius: rem(5);
+  border: solid rem(1) #d1cfcb;
+  margin-bottom: rem(6);
 }
 
 .order__form-radio {
@@ -87,11 +87,11 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  width: 16px;
-  height: 16px;
+  width: rem(16);
+  height: rem(16);
   border-radius: 50%;
   background-color: $white;
-  margin-right: 10px;
+  margin-right: rem(10);
 }
 
 .order__form-circleradio:before {
@@ -100,36 +100,36 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
+  width: rem(8);
+  height: rem(8);
   border-radius: 50%;
   background-color: #e35028;
 }
 
 .order__form-rest {
-  margin-right: 20px;
+  margin-right: rem(20);
   cursor: pointer;
 }
 
 .order__form-radi .order__form-checkboxline {
-  margin-bottom: 20px;
+  margin-bottom: rem(20);
 }
 
 .order__form-nocallinput {
-  width: 16px;
-  height: 16px;
-  margin-right: 9px;
+  width: rem(16);
+  height: rem(16);
+  margin-right: rem(9);
 }
 
 .order__form-nocall {
   display: block;
-  margin-top: 29px;
+  margin-top: rem(29);
 }
 
 .btn--order {
-  width: 97px;
-  margin-top: 14px;
-  margin-right: 20px;
+  width: rem(97);
+  margin-top: rem(14);
+  margin-right: rem(20);
 }
 
 
@@ -149,12 +149,12 @@
 .order__form-arrowcheckbox {
   vertical-align: middle;
   background-color: $white;
-  border: solid 1px #d1cfcb;
+  border: solid rem(1) #d1cfcb;
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: rem(16);
+  height: rem(16);
   position: relative;
-  margin-right: 9px;
+  margin-right: rem(9);
 }
 
 .order__form-arrowcheckbox:before {

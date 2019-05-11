@@ -7,7 +7,7 @@
 .head {
   width: 100%;
   background: url(../img/background.jpg) center center / cover no-repeat;
-  padding-top: 13px;
+  padding-top: rem(13);
 }
 
 .header {
@@ -17,13 +17,13 @@
 }
 
 .header__logo {
-  width: 92px;
-  height: 69px;
-  margin-right: 69px;
+  width: rem(92);
+  height: rem(69);
+  margin-right: rem(69);
 }
 
 .header__menu {
-  width: 680px;
+  width: rem(680);
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -33,12 +33,12 @@
 
 .header__menu-item {
   display: inline-block;
-  margin-right: 12px;
+  margin-right: rem(12);
 
   &:after {
     color: $white;
     content: '•';
-    padding-left: 11px;
+    padding-left: rem(11);
   }
 
   &:last-child {
@@ -52,7 +52,7 @@
 }
 
 .header__menu-link {
-  font-size: 13px;
+  font-size: rem(13);
   font-weight: 500;
   font-style: normal;
   line-height: 2.31;
@@ -63,7 +63,7 @@
 }
 
 .header__order-btn {
-  margin-left: 7px;
+  margin-left: rem(7);
 }
 
 .btn:hover {

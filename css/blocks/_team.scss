@@ -4,9 +4,9 @@
 }
 
 .team__content {
-  padding-top: 113px;
-  padding-left: 97px;
-  padding-right: 98px;
+  padding-top: rem(113);
+  padding-left: rem(97);
+  padding-right: rem(98);
   width: 50%;
   height: 100%;
   position: absolute;
@@ -20,33 +20,33 @@
 }
 
 .accordeon__item--active .accordeon__item-description {
-  height: 100px;
-  margin-bottom: 40px;
+  height: rem(100);
+  margin-bottom: rem(40);
 }
 
 .accordeon__link {
   font-family: 'Gagalin', sans-serif;
-  font-size: 14px;
+  font-size: rem(14);
   font-weight: normal;
   font-style: normal;
   color: $white;
   text-transform: uppercase;
   text-decoration: none;
   display: block;
-  margin-bottom: 17px;
-  padding-left: 30px;
+  margin-bottom: rem(17);
+  padding-left: rem(30);
   position: relative;
 
   &:before {
     content: '';
     position: absolute;
-    top: 6px;
+    top: rem(6);
     left: 0;
     width: 0;
     height: 0;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 7px solid $yellow;
+    border-left: rem(7) solid transparent;
+    border-right: rem(7) solid transparent;
+    border-top: rem(7) solid $yellow;
   }
 }
 
@@ -57,10 +57,10 @@
   left: 0;
   width: 0;
   height: 0;
-  border-top: 7px solid transparent;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid $yellow;
+  border-top: rem(7) solid transparent;
+  border-left: rem(7) solid transparent;
+  border-right: rem(7) solid transparent;
+  border-bottom: rem(7) solid $yellow;
 }
 
 
@@ -72,9 +72,9 @@
 }
 
 .accordeon__item-text {
-  width: 208px;
+  width: rem(208);
   font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
+  font-size: rem(14);
   font-weight: 300;
   font-style: normal;
   line-height: 1.71;
@@ -88,11 +88,11 @@
 
 .accordeon__item-img {
   flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: rem(100);
+  height: rem(100);
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 21px;
+  margin-right: rem(21);
 }
 
 .accordeon__item-pic {

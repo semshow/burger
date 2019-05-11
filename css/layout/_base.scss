@@ -1,13 +1,14 @@
-html,
-body {
-  height: 100;
+html {
+  font-size: 16px;
+  height: 100%;
 }
 
 body {
-  font-size: 16px;
+  font-size: rem(16);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   position: relative;
+  height: 100%;
 }
 
 
@@ -56,8 +57,8 @@ footer {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 940px;
-  min-width: 320px;
+  max-width: rem(940);
+  min-width: rem(320);
   margin: 0 auto;
 
   &--features {
@@ -73,7 +74,7 @@ footer {
 .title {
   font-family: 'gagalin', sans-serif;
   color: $yellow;
-  font-size: 72px;
+  font-size: rem(72);
   font-weight: normal;
   letter-spacing: normal;
   margin: 0;
@@ -83,57 +84,57 @@ footer {
   }
 
   &--intro {
-    margin-bottom: 7px;
+    margin-bottom: rem(7);
   }
 
   &--team {
-    margin-bottom: 46px;
+    margin-bottom: rem(46);
   }
 
   &--menu {
     color: $white;
-    padding-top: 111px;
-    padding-left: 102px;
+    padding-top: rem(111);
+    padding-left: rem(102);
   }
 
   &--form {
-    margin-bottom: 25px;
+    margin-bottom: rem(25);
   }
 }
 
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650);
 }
 
 .btn {
   display: inline-block;
-  height: 35px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 5px;
+  height: rem(35);
+  padding-left: rem(15);
+  padding-right: rem(15);
+  border-radius: rem(5);
   background-color: $red;
   text-decoration: none;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 13px;
+  font-size: rem(13);
   font-weight: 500;
   font-style: normal;
   letter-spacing: normal;
   text-align: center;
   color: $white;
   text-transform: uppercase;
-  line-height: 35px;
+  line-height: rem(35);
 }
 
 input,
 textarea {
   outline: none;
-  border: solid 2px transparent;
+  border: solid rem(2) transparent;
 
   &:hover,
   &:active,
   &focus {
-    border: solid 2px $yellow;
+    border: solid rem(2) $yellow;
   }
 }

@@ -7,24 +7,24 @@
 
 .scroller__list {
   list-style-type: none;
-  padding-top: 10px;
-  margin-right: -14px;
+  padding-top: rem(10);
+  margin-right: rem(-14);
 }
 
 .scroller__item {
-  margin-bottom: 5px;
+  margin-bottom: rem(5);
 }
 
 .scroller__link {
   display: block;
-  width: 16px;
-  height: 16px;
-  border: solid 1px transparent;
+  width: rem(16);
+  height: rem(16);
+  border: solid rem(1) transparent;
   border-radius: 50%;
   position: relative;
 
   &--active {
-    border: solid 1px $white;
+    border: solid rem(1) $white;
   }
 }
 
@@ -34,8 +34,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: block;
-  width: 6px;
-  height: 6px;
+  width: rem(6);
+  height: rem(6);
   background-color: $white;
   border-radius: 50%;
 }

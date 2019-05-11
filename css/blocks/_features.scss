@@ -4,9 +4,9 @@
 }
 
 .features__title {
-  width: 385px;
+  width: rem(385);
   margin: 0 auto;
-  margin-bottom: 41px;
+  margin-bottom: rem(41);
 }
 
 .features__list {
@@ -15,15 +15,15 @@
 }
 
 .features__item {
-  width: 285px;
+  width: rem(285);
 }
 
 .features__item-icon {
-  width: 97px;
-  height: 89px;
+  width: rem(97);
+  height: rem(89);
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 33px;
+  margin-bottom: rem(33);
 }
 
 .features__item-pic {
@@ -34,19 +34,19 @@
 
 .features__item-title {
   font-family: 'Lifehack', sans-serif;
-  font-size: 24px;
+  font-size: rem(24);
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   text-align: center;
   color: $gray;
-  margin-bottom: 14px;
+  margin-bottom: rem(14);
 }
 
 .features__item-text {
   opacity: 0.8;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
+  font-size: rem(14);
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;

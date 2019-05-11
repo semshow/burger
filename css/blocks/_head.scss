@@ -17,20 +17,20 @@
 
 .head__content-description {
   font-family: 'Lifehack', sans-serif;
-  font-size: 65px;
+  font-size: rem(65);
   font-weight: 500;
   font-style: normal;
   line-height: 1em;
-  letter-spacing: -1.6px;
+  // letter-spacing: -1.rem(6);
   color: $white;
 }
 
 .head__triangle {
   display: block;
-  width: 29px;
-  height: 14px;
+  width: rem(29);
+  height: rem(14);
   position: absolute;
-  bottom: 40px;
+  bottom: rem(40);
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
