@@ -10,11 +10,14 @@
   font-weight: normal;
   font-style: normal; }
 html {
-  font-size: 1rem;
+  font-size: 16px;
   height: 100%; }
+  @media screen and (max-width: 480px) {
+    html {
+      font-size: 16px; } }
   @media screen and (max-width: 768px) {
     html {
-      font-size: 10px; } }
+      font-size: 16px; } }
 
 body {
   font-size: 1rem;
@@ -76,6 +79,9 @@ footer {
   font-weight: normal;
   letter-spacing: normal;
   margin: 0; }
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 3.75rem; } }
   .title--gray {
     color: #2f3234; }
   .title--intro {
@@ -135,6 +141,11 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0; } }
 
 .header__logo {
   width: 5.75rem;
@@ -359,7 +370,7 @@ textarea {
 
 .head__content-description {
   font-family: 'Lifehack', sans-serif;
-  font-size: 4.0625rem;
+  font-size: 3.4375rem;
   font-weight: 500;
   font-style: normal;
   line-height: 1em;
@@ -392,7 +403,6 @@ textarea {
   background-size: cover; }
 
 .features__title {
-  width: 24.0625rem;
   margin: 0 auto;
   margin-bottom: 2.5625rem; }
 
@@ -422,7 +432,8 @@ textarea {
   margin-bottom: 2.0625rem; }
   @media screen and (max-width: 480px) {
     .features__item-icon {
-      flex-shrink: 0; } }
+      flex-shrink: 0;
+      margin-right: 1.75rem; } }
 
 .features__item-pic {
   max-width: 100%;
@@ -555,6 +566,9 @@ textarea {
   letter-spacing: normal;
   text-align: left;
   color: #ffffff; }
+  @media screen and (max-width: 480px) {
+    .order__form {
+      width: 28.75rem; } }
 
 .order__form-name {
   display: flex;

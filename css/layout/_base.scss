@@ -1,8 +1,11 @@
 html {
-  font-size: rem(16);
+  font-size: 16px;
   height: 100%;
+  @include phones {
+    font-size: 16px;
+  }
   @include tablets {
-    font-size: 10px;
+    font-size: 16px;
   }
 }
 
@@ -81,6 +84,10 @@ footer {
   font-weight: normal;
   letter-spacing: normal;
   margin: 0;
+
+  @include phones {
+    font-size: rem(60);
+  }
 
   &--gray {
     color: $gray;

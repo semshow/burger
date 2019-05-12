@@ -2,9 +2,7 @@
   background: url(../img/order.jpg) center center / cover no-repeat;
   display: flex;
   justify-content: center;
-  // align-items: center;
 }
-
 
 
 .order__form {
@@ -19,6 +17,10 @@
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+
+  @include phones {
+    width: rem(460);
+  }
 }
 
 .order__form-name {
