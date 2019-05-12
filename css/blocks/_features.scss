@@ -12,10 +12,23 @@
 .features__list {
   display: flex;
   justify-content: space-around;
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .features__item {
   width: rem(285);
+
+  @include phones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
 }
 
 .features__item-icon {
@@ -24,6 +37,10 @@
   margin: 0 auto;
   text-align: center;
   margin-bottom: rem(33);
+
+  @include phones {
+    flex-shrink: 0;
+  }
 }
 
 .features__item-pic {
@@ -41,6 +58,11 @@
   text-align: center;
   color: $gray;
   margin-bottom: rem(14);
+
+  @include phones {
+    text-align: left;
+
+  }
 }
 
 .features__item-text {
@@ -54,4 +76,8 @@
   text-align: center;
   line-height: 1.71;
   color: rgba(47, 50, 52, 0.8);
+
+  @include phones {
+    text-align: left;
+  }
 }

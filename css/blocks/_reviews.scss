@@ -13,6 +13,10 @@
   width: 25%;
   height: 50vh;
   overflow: hidden;
+  @include tablets {
+    width: 50%;
+    height: 25vh;
+  }
 }
 
 .reviews__pic {

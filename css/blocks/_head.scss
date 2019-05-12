@@ -4,6 +4,11 @@
   justify-content: space-between;
   flex: 1;
   margin-bottom: 15%;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .head__content-pic {
@@ -21,8 +26,17 @@
   font-weight: 500;
   font-style: normal;
   line-height: 1em;
-  // letter-spacing: -1.rem(6);
   color: $white;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.head__content-word {
+  display: block;
 }
 
 .head__triangle {

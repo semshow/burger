@@ -53,7 +53,7 @@
 }
 
 .menu__accordeon-hide {
-  display: flex;
+  display: block;
   justify-content: center;
   background-color: rgba($color: #3e3c3c, $alpha: 0.7);
   font-family: 'Ubuntu', sans-serif;
@@ -63,6 +63,9 @@
   color: $white;
   overflow: hidden;
   width: 0;
+  @include tablets {
+    
+  }
 }
 
 .menu__accordeon-item--active .menu__accordeon-hide {

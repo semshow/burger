@@ -1,6 +1,9 @@
 html {
-  font-size: 16px;
+  font-size: rem(16);
   height: 100%;
+  @include tablets {
+    font-size: 10px;
+  }
 }
 
 body {
@@ -105,7 +108,7 @@ footer {
 
 .section {
   height: 100vh;
-  min-height: rem(650);
+  min-height: 650px;
 }
 
 .btn {
