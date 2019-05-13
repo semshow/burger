@@ -21,15 +21,27 @@
   align-items: center;
   height: 100%;
   width: rem(940);
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__contacts {
   width: 50%;
+  @include phones {
+    width: 100%;
+  }
 }
 
 .footer__social {
   text-align: right;
   width: 50%;
+
+  @include phones {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .footer__contacts-adress {
@@ -42,6 +54,9 @@
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+  @include phones {
+    text-align: center;
+  }
 }
 
 .footer__contacts-phone {
@@ -49,6 +64,10 @@
   @extend .footer__contacts-adress;
   font-weight: bold;
   color: #e45028;
+
+  @include phones {
+    margin-bottom: 10px;
+  }
 }
 
 .footer__social-pic {

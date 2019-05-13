@@ -23,7 +23,11 @@
   }
 }
 
-
+.accordeon__item {
+  @include phones {
+    text-align: center;
+  }
+}
 
 .accordeon__link {
   color: $yellow;
@@ -32,6 +36,10 @@
 .accordeon__item--active .accordeon__item-description {
   height: rem(100);
   margin-bottom: rem(40);
+
+  @include phones {
+    height: 100%;
+  }
 }
 
 .accordeon__link {
@@ -46,6 +54,10 @@
   margin-bottom: rem(17);
   padding-left: rem(30);
   position: relative;
+
+  @include phones {
+    display: inline-block;
+  }
 
   &:before {
     content: '';
@@ -79,6 +91,11 @@
   justify-content: flex-start;
   height: 0;
   overflow: hidden;
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .accordeon__item-text {
@@ -90,6 +107,11 @@
   line-height: 1.71;
   letter-spacing: normal;
   color: $white;
+
+  @include phones {
+    width: 21rem;
+    text-align: center;
+  }
 }
 
 .accordeon__item-title {
@@ -103,6 +125,10 @@
   border-radius: 50%;
   overflow: hidden;
   margin-right: rem(21);
+
+  @include phones {
+    margin-right: 0;
+  }
 }
 
 .accordeon__item-pic {

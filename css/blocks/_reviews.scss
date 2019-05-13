@@ -13,6 +13,7 @@
   width: 25%;
   height: 50vh;
   overflow: hidden;
+
   @include tablets {
     width: 50%;
     height: 25vh;
@@ -43,6 +44,9 @@
 
 .reviews__item-content {
   padding: 0 rem(33) 0 rem(20);
+  @include phones {
+    text-align: center;
+  }
 }
 
 .reviews__item-title {
@@ -64,6 +68,10 @@
   text-align: left;
   color: $white;
   margin-bottom: rem(17);
+
+  @include phones {
+    display: none;
+  }
 }
 
 .reviews__item-button {
@@ -81,10 +89,18 @@
   color: $white;
   text-transform: uppercase;
   text-decoration: none;
-}
 
-.reviews__item-button:hover {
-  background-color: #1f2122;
+  @include phones {
+    display: inline-block;
+  }
+
+  &:hover {
+    background-color: #1f2122;
+  }
+
+  @include phones {
+
+  }
 }
 
 .reviews__item:hover .reviews__item-description {

@@ -70,6 +70,9 @@
 
 .menu__accordeon-item--active .menu__accordeon-hide {
   width: rem(540);
+  @include phones {
+    width: 10.90rem;
+  }
 }
 
 .menu__accordeon-item--active .menu__accordeon-title {
@@ -78,5 +81,5 @@
 
 
 .menu__accordeon-text {
-  padding-left: 24px;
+  padding-left: rem(24);
 }

@@ -74,6 +74,9 @@ footer {
   &--form {
     align-items: center;
     justify-content: center;
+    @include phones {
+      width: rem(460);
+    }
   }
 }
 
@@ -109,6 +112,11 @@ footer {
 
   &--form {
     margin-bottom: rem(25);
+
+    @include phones {
+      text-align: center;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -146,5 +154,9 @@ textarea {
   &:active,
   &focus {
     border: solid rem(2) $yellow;
+  }
+
+  @include phones {
+    flex: 1;
   }
 }
