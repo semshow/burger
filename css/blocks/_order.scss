@@ -18,6 +18,10 @@
   text-align: left;
   color: #ffffff;
 
+  @include tablets {
+    flex-direction: column;
+  }
+
   @include phones {
     max-width: rem(480);
     flex-direction: column;
@@ -30,7 +34,8 @@
   margin-bottom: rem(19);
 
   @include phones {
-    width: 87%;
+    width: 100vw;
+    justify-content: space-around;
   }
 }
 
@@ -39,7 +44,7 @@
   margin-bottom: rem(19);
 
   @include phones {
-    width: 87%;
+    width: 100vw;
   }
 }
 
@@ -62,6 +67,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 0;
   }
 }
 
@@ -72,7 +78,7 @@
   border: solid rem(1) #d1cfcb;
 
   @include phones {
-    width: rem(195);
+    width: 45vw;
   }
 }
 
@@ -83,7 +89,16 @@
   border: solid rem(1) #d1cfcb;
 
   @include phones {
-    width: rem(402);
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+
+@include phones {
+  .order__form-streettitle {
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
@@ -94,7 +109,7 @@
   border: solid rem(1) #d1cfcb;
 
   @include phones {
-    width: rem(126);
+    width: 100%;
   }
 }
 
@@ -103,7 +118,15 @@
   justify-content: space-between;
 
   @include phones {
-    width: 87%;
+    width: 100vw;
+    justify-content: space-around;
+    margin-bottom: rem(10);
+  }
+}
+
+@include phones {
+  .order__form-houselineblock {
+    width: 29%;
   }
 }
 
@@ -131,7 +154,16 @@
   margin-bottom: rem(6);
 
   @include phones {
-    width: 87%;
+    width: 95vw;
+  }
+}
+
+
+@include phones {
+  .order__form-checkboxline {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -173,6 +205,10 @@
 .order__form-rest {
   margin-right: rem(20);
   cursor: pointer;
+
+  @include phones {
+    margin-right: 0;
+  }
 }
 
 .order__form-radi .order__form-checkboxline {

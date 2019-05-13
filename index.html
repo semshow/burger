@@ -502,7 +502,7 @@
             </div>
 
             <label class="order__form-street" for="street">
-              <p>
+              <p class="order__form-streettitle">
                 Улица
               </p>
               <input id="street" type="text" class="order__form-inputstreet">
@@ -510,17 +510,17 @@
 
             <div class="order__form-houseline">
 
-              <label for="house">
+              <label class="order__form-houselineblock" for="house">
                 <p>Дом</p>
                 <input id="house" type="text" class="order__form-inputhouse">
               </label>
 
-              <label for="house-block">
+              <label for="house-block" class="order__form-houselineblock">
                 <p>Корпус</p>
                 <input id="house-block" type="text" class="order__form-inputhouse">
               </label>
 
-              <label for="apartment">
+              <label for="apartment" class="order__form-houselineblock">
                 <p>Квартира</p>
                 <input id="apartment" type="text" class="order__form-inputhouse">
               </label>
@@ -533,12 +533,13 @@
             </div>
           </div>
           <div class="order__form-checkbox">
-            <p>
-              Комментарий
-            </p>
-            <textarea name="comments" id="comments" cols="30" rows="10" class="order__form-textarea"></textarea>
-
-            <p class="order__form-checkboxline">
+            <div class="order__form-textareablock">
+              <p>
+                Комментарий
+              </p>
+              <textarea name="comments" id="comments" cols="30" rows="10" class="order__form-textarea"></textarea>
+            </div>
+            <div class="order__form-checkboxline">
               <label for="rest" class="order__form-rest">
                 <input type="radio" name="money" value="cashpayment" id="rest" class="order__form-radio" checked>
                 <span class="order__form-circleradio"></span>
@@ -549,7 +550,7 @@
                 <span class="order__form-circleradio"></span>
                 Оплата по карте
               </label>
-            </p>
+            </div>
             <label for="nocall" class="order__form-nocall">
               <input type="checkbox" id="nocall" class="order__form-nocallinput">
               <span class="order__form-arrowcheckbox"></span>

@@ -10,6 +10,10 @@
   position: absolute;
   right: 0;
   top: 0;
+
+  @include phones {
+    width: 100vw;
+  }
 }
 
 .menu__accordeon-item {
@@ -17,6 +21,7 @@
   min-width: rem(80);
   height: 100%;
   overflow: hidden;
+
   &--activ {
     width: rem(540);
   }
@@ -63,13 +68,13 @@
   color: $white;
   overflow: hidden;
   width: 0;
-  @include tablets {
-    
-  }
+
+  @include tablets {}
 }
 
 .menu__accordeon-item--active .menu__accordeon-hide {
   width: rem(540);
+
   @include phones {
     width: 10.90rem;
   }

@@ -12,12 +12,12 @@
 html {
   font-size: 16px;
   height: 100%; }
-  @media screen and (max-width: 480px) {
-    html {
-      font-size: 16px; } }
   @media screen and (max-width: 768px) {
     html {
       font-size: 16px; } }
+  @media screen and (max-width: 375px) {
+    html {
+      font-size: 14px; } }
 
 body {
   font-size: 1rem;
@@ -88,7 +88,8 @@ footer {
   .title--gray {
     color: #2f3234; }
   .title--intro {
-    margin-bottom: 0.4375rem; }
+    margin-bottom: 0.4375rem;
+    text-align: center; }
   .title--team {
     margin-bottom: 2.875rem; }
   .title--menu {
@@ -96,11 +97,8 @@ footer {
     padding-top: 6.9375rem;
     padding-left: 6.375rem; }
   .title--form {
-    margin-bottom: 1.5625rem; }
-    @media screen and (max-width: 480px) {
-      .title--form {
-        text-align: center;
-        margin: 0 auto; } }
+    margin-bottom: 1.5625rem;
+    text-align: center; }
 
 .section {
   height: 100vh;
@@ -281,6 +279,7 @@ textarea {
   overflow: hidden; }
   @media screen and (max-width: 480px) {
     .accordeon__item-description {
+      width: 100vw;
       flex-direction: column;
       align-items: center; } }
 
@@ -295,7 +294,7 @@ textarea {
   color: #ffffff; }
   @media screen and (max-width: 480px) {
     .accordeon__item-text {
-      width: 21rem;
+      width: 95%;
       text-align: center; } }
 
 .accordeon__item-title {
@@ -328,6 +327,9 @@ textarea {
   position: absolute;
   right: 0;
   top: 0; }
+  @media screen and (max-width: 480px) {
+    .menu__accordeon {
+      width: 100vw; } }
 
 .menu__accordeon-item {
   display: flex;
@@ -609,6 +611,9 @@ textarea {
   letter-spacing: normal;
   text-align: left;
   color: #ffffff; }
+  @media screen and (max-width: 768px) {
+    .order__form {
+      flex-direction: column; } }
   @media screen and (max-width: 480px) {
     .order__form {
       max-width: 30rem;
@@ -620,14 +625,15 @@ textarea {
   margin-bottom: 1.1875rem; }
   @media screen and (max-width: 480px) {
     .order__form-name {
-      width: 87%; } }
+      width: 100vw;
+      justify-content: space-around; } }
 
 .order__form-street {
   display: block;
   margin-bottom: 1.1875rem; }
   @media screen and (max-width: 480px) {
     .order__form-street {
-      width: 87%; } }
+      width: 100vw; } }
 
 .order__form-houseline {
   display: flex;
@@ -645,7 +651,8 @@ textarea {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; } }
+      align-items: center;
+      margin-right: 0; } }
 
 .order__form-inputname {
   width: 13.75rem;
@@ -654,7 +661,7 @@ textarea {
   border: solid 0.0625rem #d1cfcb; }
   @media screen and (max-width: 480px) {
     .order__form-inputname {
-      width: 12.1875rem; } }
+      width: 45vw; } }
 
 .order__form-inputstreet {
   width: 28.75rem;
@@ -663,8 +670,14 @@ textarea {
   border: solid 0.0625rem #d1cfcb; }
   @media screen and (max-width: 480px) {
     .order__form-inputstreet {
-      width: 25.125rem; } }
+      display: block;
+      margin: 0 auto;
+      width: 95%; } }
 
+@media screen and (max-width: 480px) {
+  .order__form-streettitle {
+    width: 95%;
+    margin: 0 auto; } }
 .order__form-inputhouse {
   width: 6.25rem;
   height: 2.25rem;
@@ -672,15 +685,20 @@ textarea {
   border: solid 0.0625rem #d1cfcb; }
   @media screen and (max-width: 480px) {
     .order__form-inputhouse {
-      width: 7.875rem; } }
+      width: 100%; } }
 
 .order__form-houseline {
   display: flex;
   justify-content: space-between; }
   @media screen and (max-width: 480px) {
     .order__form-houseline {
-      width: 87%; } }
+      width: 100vw;
+      justify-content: space-around;
+      margin-bottom: 0.625rem; } }
 
+@media screen and (max-width: 480px) {
+  .order__form-houselineblock {
+    width: 29%; } }
 @media screen and (max-width: 480px) {
   .order__form-stage {
     display: none; } }
@@ -698,8 +716,13 @@ textarea {
   margin-bottom: 0.375rem; }
   @media screen and (max-width: 480px) {
     .order__form-textarea {
-      width: 87%; } }
+      width: 95vw; } }
 
+@media screen and (max-width: 480px) {
+  .order__form-checkboxline {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around; } }
 .order__form-radio {
   display: none; }
   .order__form-radio:not(:checked) + .order__form-circleradio:before {
@@ -731,6 +754,9 @@ textarea {
 .order__form-rest {
   margin-right: 1.25rem;
   cursor: pointer; }
+  @media screen and (max-width: 480px) {
+    .order__form-rest {
+      margin-right: 0; } }
 
 .order__form-radi .order__form-checkboxline {
   margin-bottom: 1.25rem; }

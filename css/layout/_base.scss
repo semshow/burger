@@ -1,11 +1,13 @@
 html {
   font-size: 16px;
   height: 100%;
-  @include phones {
-    font-size: 16px;
-  }
+
   @include tablets {
     font-size: 16px;
+  }
+
+  @include phones-small {
+    font-size: 14px;
   }
 }
 
@@ -74,6 +76,7 @@ footer {
   &--form {
     align-items: center;
     justify-content: center;
+
     @include phones {
       width: rem(460);
     }
@@ -98,6 +101,7 @@ footer {
 
   &--intro {
     margin-bottom: rem(7);
+    text-align: center;
   }
 
   &--team {
@@ -112,11 +116,7 @@ footer {
 
   &--form {
     margin-bottom: rem(25);
-
-    @include phones {
-      text-align: center;
-      margin: 0 auto;
-    }
+    text-align: center;
   }
 }
 
