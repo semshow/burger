@@ -505,7 +505,8 @@ textarea {
       text-align: left; } }
 
 .reviews {
-  font-size: 0; }
+  font-size: 0;
+  min-height: initial; }
 
 .reviews__list {
   display: flex;

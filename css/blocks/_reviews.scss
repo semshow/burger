@@ -1,5 +1,6 @@
 .reviews {
   font-size: 0;
+  min-height: initial;
 }
 
 .reviews__list {
@@ -96,10 +97,6 @@
 
   &:hover {
     background-color: #1f2122;
-  }
-
-  @include phones {
-
   }
 }
 
