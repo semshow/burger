@@ -88,8 +88,10 @@ footer {
   .title--gray {
     color: #2f3234; }
   .title--intro {
-    margin-bottom: 0.4375rem;
-    text-align: center; }
+    margin-bottom: 0.4375rem; }
+    @media screen and (max-width: 768px) {
+      .title--intro {
+        text-align: center; } }
   .title--team {
     margin-bottom: 2.875rem; }
   .title--menu {
@@ -423,12 +425,19 @@ textarea {
       flex-direction: column;
       justify-content: center; } }
 
+.head__content-img {
+  width: 50%; }
+
 .head__content-pic {
   max-width: 100%;
   max-height: 100%; }
 
 .head__content-text {
-  padding-top: 8%; }
+  padding-top: 8%;
+  width: 50%; }
+  @media screen and (max-width: 768px) {
+    .head__content-text {
+      width: 100%; } }
 
 .head__content-description {
   font-family: 'Lifehack', sans-serif;
@@ -436,12 +445,11 @@ textarea {
   font-weight: 500;
   font-style: normal;
   line-height: 1em;
-  color: #ffffff; }
+  color: #ffffff;
+  text-align: left; }
   @media screen and (max-width: 768px) {
     .head__content-description {
-      display: flex;
-      flex-direction: column;
-      align-items: center; } }
+      text-align: center; } }
 
 .head__content-word {
   display: block; }

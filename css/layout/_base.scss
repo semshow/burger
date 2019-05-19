@@ -101,7 +101,9 @@ footer {
 
   &--intro {
     margin-bottom: rem(7);
-    text-align: center;
+     @include tablets {
+       text-align: center;
+     }
   }
 
   &--team {
