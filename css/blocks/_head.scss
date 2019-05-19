@@ -8,13 +8,16 @@
   @include tablets {
     flex-direction: column;
     justify-content: center;
+    padding: 0 15%;
   }
 }
 
 .head__content-img {
   width: 50%;
 
-  
+  @include tablets {
+    width: 100%;
+  }
 }
 
 
@@ -29,12 +32,13 @@
 
   @include tablets {
     width: 100%;
+    padding-top: 0;
   }
 }
 
 .head__content-description {
   font-family: 'Lifehack', sans-serif;
-  font-size: rem(55);
+  font-size: rem(54);
   font-weight: 500;
   font-style: normal;
   line-height: 1em;
@@ -43,6 +47,14 @@
 
   @include tablets {
     text-align: center;
+  }
+
+  @include phones-small {
+    font-size: rem(33);
+  }
+
+  @include phones {
+    font-size: rem(43);
   }
 }
 

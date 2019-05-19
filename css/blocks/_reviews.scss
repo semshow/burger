@@ -58,6 +58,10 @@
   text-align: left;
   color: $white;
   margin-bottom: rem(30);
+
+  @include phones-small {
+    text-align: center;
+  }
 }
 
 .reviews__item-text {

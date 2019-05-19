@@ -84,7 +84,10 @@ footer {
   margin: 0; }
   @media screen and (max-width: 480px) {
     .title {
-      font-size: 3.75rem; } }
+      font-size: 3.125rem; } }
+  @media screen and (max-width: 375px) {
+    .title {
+      font-size: 2.8125rem; } }
   .title--gray {
     color: #2f3234; }
   .title--intro {
@@ -365,6 +368,9 @@ textarea {
   overflow: hidden; }
   .menu__accordeon-item--activ {
     width: 33.75rem; }
+  @media screen and (max-width: 480px) {
+    .menu__accordeon-item {
+      min-width: 3rem; } }
 
 .menu--meat {
   background: url(../img/menu1.jpg) center center/cover no-repeat; }
@@ -379,6 +385,9 @@ textarea {
   background-color: rgba(62, 60, 60, 0.8);
   min-width: 5rem;
   position: relative; }
+  @media screen and (max-width: 480px) {
+    .menu__accordeon-top {
+      min-width: 3rem; } }
 
 .menu__accordeon-title {
   position: absolute;
@@ -406,7 +415,7 @@ textarea {
   width: 33.75rem; }
   @media screen and (max-width: 480px) {
     .menu__accordeon-item--active .menu__accordeon-hide {
-      width: 10.90rem; } }
+      width: 100%; } }
 
 .menu__accordeon-item--active .menu__accordeon-title {
   color: #f9b43b; }
@@ -423,10 +432,14 @@ textarea {
   @media screen and (max-width: 768px) {
     .head__content {
       flex-direction: column;
-      justify-content: center; } }
+      justify-content: center;
+      padding: 0 15%; } }
 
 .head__content-img {
   width: 50%; }
+  @media screen and (max-width: 768px) {
+    .head__content-img {
+      width: 100%; } }
 
 .head__content-pic {
   max-width: 100%;
@@ -437,11 +450,12 @@ textarea {
   width: 50%; }
   @media screen and (max-width: 768px) {
     .head__content-text {
-      width: 100%; } }
+      width: 100%;
+      padding-top: 0; } }
 
 .head__content-description {
   font-family: 'Lifehack', sans-serif;
-  font-size: 3.4375rem;
+  font-size: 3.375rem;
   font-weight: 500;
   font-style: normal;
   line-height: 1em;
@@ -450,6 +464,12 @@ textarea {
   @media screen and (max-width: 768px) {
     .head__content-description {
       text-align: center; } }
+  @media screen and (max-width: 375px) {
+    .head__content-description {
+      font-size: 2.0625rem; } }
+  @media screen and (max-width: 480px) {
+    .head__content-description {
+      font-size: 2.6875rem; } }
 
 .head__content-word {
   display: block; }
@@ -590,6 +610,9 @@ textarea {
   text-align: left;
   color: #ffffff;
   margin-bottom: 1.875rem; }
+  @media screen and (max-width: 375px) {
+    .reviews__item-title {
+      text-align: center; } }
 
 .reviews__item-text {
   font-family: 'Ubuntu', sans-serif;

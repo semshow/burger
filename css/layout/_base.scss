@@ -92,7 +92,11 @@ footer {
   margin: 0;
 
   @include phones {
-    font-size: rem(60);
+    font-size: rem(50);
+  }
+
+  @include phones-small {
+    font-size: rem(45);
   }
 
   &--gray {
@@ -104,6 +108,7 @@ footer {
      @include tablets {
        text-align: center;
      }
+
   }
 
   &--team {

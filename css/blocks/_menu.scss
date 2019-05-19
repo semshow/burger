@@ -25,6 +25,10 @@
   &--activ {
     width: rem(540);
   }
+
+  @include phones {
+    min-width: 3rem;
+  }
 }
 
 .menu--meat {
@@ -44,6 +48,10 @@
   background-color: rgba($color: #3e3c3c, $alpha: 0.8);
   min-width: rem(80);
   position: relative;
+
+  @include phones {
+    min-width: 3rem;
+  }
 }
 
 .menu__accordeon-title {
@@ -69,14 +77,14 @@
   overflow: hidden;
   width: 0;
 
-  @include tablets {}
+  
 }
 
 .menu__accordeon-item--active .menu__accordeon-hide {
   width: rem(540);
 
   @include phones {
-    width: 10.90rem;
+    width: 100%;
   }
 }
 
