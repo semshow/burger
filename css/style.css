@@ -12,9 +12,6 @@
 html {
   font-size: 16px;
   height: 100%; }
-  @media screen and (max-width: 768px) {
-    html {
-      font-size: 16px; } }
   @media screen and (max-width: 375px) {
     html {
       font-size: 14px; } }
@@ -74,6 +71,9 @@ footer {
     @media screen and (max-width: 480px) {
       .container--form {
         width: 28.75rem; } }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 95%; } }
 
 .title {
   font-family: 'gagalin', sans-serif;
@@ -147,6 +147,7 @@ textarea {
   padding-top: 0.8125rem; }
 
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -164,6 +165,9 @@ textarea {
 .header__menu {
   width: 42.5rem;
   font-family: 'Ubuntu', sans-serif; }
+  @media screen and (max-width: 768px) {
+    .header__menu {
+      display: none; } }
 
 .header__menu-list {
   list-style-type: circle; }
@@ -193,9 +197,30 @@ textarea {
 
 .header__order-btn {
   margin-left: 0.4375rem; }
+  @media screen and (max-width: 768px) {
+    .header__order-btn {
+      margin-right: 1.875rem; } }
 
 .btn:hover {
   background-color: #c1401e; }
+
+.header__hamburger {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 1.5rem;
+  height: 1.375rem;
+  cursor: pointer;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .header__hamburger {
+      display: flex; } }
+
+.header__hamburger-item {
+  height: 0.25rem;
+  width: 1.5rem;
+  border-radius: 0.3125rem;
+  background-color: #ffffff; }
 
 .team {
   position: relative;

@@ -2,10 +2,6 @@ html {
   font-size: 16px;
   height: 100%;
 
-  @include tablets {
-    font-size: 16px;
-  }
-
   @include phones-small {
     font-size: 14px;
   }
@@ -80,6 +76,10 @@ footer {
     @include phones {
       width: rem(460);
     }
+  }
+
+  @include tablets {
+    width: 95%;
   }
 }
 

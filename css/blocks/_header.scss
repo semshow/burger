@@ -11,9 +11,11 @@
 }
 
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @include phones {
     position: absolute;
     top: 0;
@@ -30,6 +32,10 @@
 .header__menu {
   width: rem(680);
   font-family: 'Ubuntu', sans-serif;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .header__menu-list {
@@ -69,8 +75,37 @@
 
 .header__order-btn {
   margin-left: rem(7);
+
+  @include tablets {
+    margin-right: rem(30);
+  }
 }
 
 .btn:hover {
   background-color: #c1401e;
 }
+
+.header__hamburger {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: rem(24);
+  height: rem(22);
+  cursor: pointer;
+  display: none; 
+
+  @include tablets {
+    display: flex;
+  }
+}
+
+.header__hamburger-item {
+  height: rem(4);
+  width: rem(24);
+  border-radius: rem(5);
+  background-color: $white;
+  
+}
+
+
+
