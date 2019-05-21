@@ -13,6 +13,65 @@
 </head>
 
 <body>
+   <aside class="scroller">
+      <ul class="scroller__list">
+        <li class="scroller__item">
+          <a href="#" class="scroller__link scroller__link--active">
+            <div class="scroller__link-circle">
+            </div>
+          </a>
+        </li>
+        <li class="scroller__item">
+          <a href="#" class="scroller__link">
+            <div class="scroller__link-circle">
+            </div>
+          </a>
+        </li>
+        <li class="scroller__item">
+          <a href="#" class="scroller__link">
+            <div class="scroller__link-circle">
+            </div>
+          </a>
+        </li>
+        <li class="scroller__item">
+          <a href="#" class="scroller__link">
+            <div class="scroller__link-circle">
+            </div>
+          </a>
+        </li>
+        <li class="scroller__item">
+          <a href="#" class="scroller__link">
+            <div class="scroller__link-circle">
+            </div>
+          </a>
+        </li>
+        <li class="scroller__item">
+          <a href="#" class="scroller__link">
+            <div class="scroller__link-circle">
+            </div>
+          </a>
+        </li>
+        <li class="scroller__item">
+          <a href="#" class="scroller__link">
+            <div class="scroller__link-circle">
+            </div>
+          </a>
+        </li>
+        <li class="scroller__item">
+          <a href="#" class="scroller__link">
+            <div class="scroller__link-circle">
+            </div>
+          </a>
+        </li>
+        <li class="scroller__item">
+          <a href="#" class="scroller__link">
+            <div class="scroller__link-circle">
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </aside>
   <div class="wrapper">
     <section class="section head">
       <div class="container">
@@ -94,66 +153,6 @@
         </div>
       </div>
     </section>
-
-    <aside class="scroller">
-      <ul class="scroller__list">
-        <li class="scroller__item">
-          <a href="#" class="scroller__link scroller__link--active">
-            <div class="scroller__link-circle">
-            </div>
-          </a>
-        </li>
-        <li class="scroller__item">
-          <a href="#" class="scroller__link">
-            <div class="scroller__link-circle">
-            </div>
-          </a>
-        </li>
-        <li class="scroller__item">
-          <a href="#" class="scroller__link">
-            <div class="scroller__link-circle">
-            </div>
-          </a>
-        </li>
-        <li class="scroller__item">
-          <a href="#" class="scroller__link">
-            <div class="scroller__link-circle">
-            </div>
-          </a>
-        </li>
-        <li class="scroller__item">
-          <a href="#" class="scroller__link">
-            <div class="scroller__link-circle">
-            </div>
-          </a>
-        </li>
-        <li class="scroller__item">
-          <a href="#" class="scroller__link">
-            <div class="scroller__link-circle">
-            </div>
-          </a>
-        </li>
-        <li class="scroller__item">
-          <a href="#" class="scroller__link">
-            <div class="scroller__link-circle">
-            </div>
-          </a>
-        </li>
-        <li class="scroller__item">
-          <a href="#" class="scroller__link">
-            <div class="scroller__link-circle">
-            </div>
-          </a>
-        </li>
-        <li class="scroller__item">
-          <a href="#" class="scroller__link">
-            <div class="scroller__link-circle">
-            </div>
-          </a>
-        </li>
-
-      </ul>
-    </aside>
 
     <section class="section features">
       <div class="container container--features">
@@ -498,13 +497,13 @@
         <form action="#" method="post" class="order__form">
           <div class="order__form-text">
             <div class="order__form-name">
-              <label for="name" class="order__form-nameline">
+              <label for="name" class="order__form-line order__form-nameline">
                 <p> Имя</p>
-                <input id="name" type="text" class="order__form-inputname">
+                <input id="name" type="text" class="order__input">
               </label>
-              <label for="phone" class="phoneline">
+              <label for="phone" class="order__form-line">
                 <p>Телефон</p>
-                <input id="phone" type="text" class="order__form-inputname">
+                <input id="phone" type="text" class="order__input">
               </label>
             </div>
 
@@ -512,29 +511,29 @@
               <p class="order__form-streettitle">
                 Улица
               </p>
-              <input id="street" type="text" class="order__form-inputstreet">
+              <input id="street" type="text" class="order__input">
             </label>
 
             <div class="order__form-houseline">
 
               <label class="order__form-houselineblock" for="house">
                 <p>Дом</p>
-                <input id="house" type="text" class="order__form-inputhouse">
+                <input id="house" type="text" class="order__input">
               </label>
 
               <label for="house-block" class="order__form-houselineblock">
                 <p>Корпус</p>
-                <input id="house-block" type="text" class="order__form-inputhouse">
+                <input id="house-block" type="text" class="order__input">
               </label>
 
               <label for="apartment" class="order__form-houselineblock">
                 <p>Квартира</p>
-                <input id="apartment" type="text" class="order__form-inputhouse">
+                <input id="apartment" type="text" class="order__input">
               </label>
 
               <label for="stage" class="order__form-stage">
                 <p>Этаж</p>
-                <input id="stage" type="text" class="order__form-inputhouse ">
+                <input id="stage" type="text" class="order__input">
               </label>
 
             </div>
@@ -544,7 +543,7 @@
               <p>
                 Комментарий
               </p>
-              <textarea name="comments" id="comments" cols="30" rows="10" class="order__form-textarea"></textarea>
+              <textarea name="comments" id="comments" cols="30" rows="10" class="order__input order__input-textarea"></textarea>
             </div>
             <div class="order__form-checkboxline">
               <label for="rest" class="order__form-rest">

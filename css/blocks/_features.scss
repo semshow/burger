@@ -6,6 +6,10 @@
 .features__title {
   margin: 0 auto;
   margin-bottom: rem(41);
+
+  @include phones_small {
+    margin-bottom: 0;
+  }
 }
 
 .features__list {
@@ -26,6 +30,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
   }
 }
@@ -61,7 +66,10 @@
 
   @include phones {
     text-align: left;
+  }
 
+  @include phones {
+    margin-bottom: 0;
   }
 }
 

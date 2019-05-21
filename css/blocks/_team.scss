@@ -24,6 +24,7 @@
 }
 
 .accordeon__item {
+  margin-bottom: rem(40);
   @include phones {
     text-align: center;
   }
@@ -34,8 +35,7 @@
 }
 
 .accordeon__item--active .accordeon__item-description {
-  height: rem(100);
-  margin-bottom: rem(40);
+  height: 100%;
 
   @include phones {
     height: 100%;
@@ -57,12 +57,14 @@
 
   @include phones {
     display: inline-block;
+    font-size: rem(24);
   }
 
   &:before {
     content: '';
     position: absolute;
-    top: rem(6);
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     width: 0;
     height: 0;
@@ -75,7 +77,8 @@
 .accordeon__item--active .accordeon__link:before {
   content: '';
   position: absolute;
-  top: 0;
+  bottom: 50%;
+  transform: translateY(-50%);
   left: 0;
   width: 0;
   height: 0;

@@ -113,6 +113,10 @@ footer {
 
   &--team {
     margin-bottom: rem(46);
+
+    @include phones-small {
+      margin-bottom: rem(30);
+    }
   }
 
   &--menu {
@@ -124,6 +128,10 @@ footer {
   &--form {
     margin-bottom: rem(25);
     text-align: center;
+
+    @include phones-small {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -131,6 +139,13 @@ footer {
 .section {
   height: 100vh;
   min-height: 650px;
+
+  @include phones {
+    min-height: initial;
+  } 
+  @include phones-small {
+    min-height: initial;
+  } 
 }
 
 .btn {
