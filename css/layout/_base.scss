@@ -144,6 +144,15 @@ footer {
     color: $white;
     line-height: 4.5rem;
     margin-bottom: rem(56);
+    @include tablets {
+      width: rem(342);
+      text-align: center;
+      line-height: 1.1;
+    }
+
+    @include phones {
+      margin-bottom: 0;
+    }
   }
 
   &--price {
@@ -171,6 +180,10 @@ footer {
     font-size: 20px;
     color: $white;
     opacity: 0.5;
+
+    @include phones-small {
+      left: 11%;
+    }
   }
 
 }
