@@ -69,6 +69,11 @@ footer {
     justify-content: center;
   }
 
+  &--slider {
+    position: relative;
+    justify-content: center;
+  }
+
   &--form {
     align-items: center;
     justify-content: center;
@@ -105,9 +110,10 @@ footer {
 
   &--intro {
     margin-bottom: rem(7);
-     @include tablets {
-       text-align: center;
-     }
+
+    @include tablets {
+      text-align: center;
+    }
 
   }
 
@@ -133,8 +139,41 @@ footer {
       margin-bottom: 0;
     }
   }
-}
 
+  &--slider {
+    color: $white;
+    line-height: 4.5rem;
+    margin-bottom: rem(56);
+  }
+
+  &--price {
+    color: #e35028;
+  }
+
+  &--currency {
+    color: #e35028;
+    font-size: rem(28);
+    margin-right: rem(29);
+  }
+
+  &--icon {
+    font-size: rem(14);
+    color: $white;
+    opacity: 0.5;
+  }
+  &--iconinclude {
+    font-size: rem(14);
+    color: $white;
+  }
+
+  &--kkal {
+    position: absolute;
+    font-size: 20px;
+    color: $white;
+    opacity: 0.5;
+  }
+
+}
 
 .section {
   height: 100vh;
@@ -142,10 +181,11 @@ footer {
 
   @include phones {
     min-height: initial;
-  } 
+  }
+
   @include phones-small {
     min-height: initial;
-  } 
+  }
 }
 
 .btn {
@@ -165,6 +205,11 @@ footer {
   color: $white;
   text-transform: uppercase;
   line-height: rem(35);
+
+  &--slider {
+    vertical-align: baseline;
+
+  }
 }
 
 input,
