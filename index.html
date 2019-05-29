@@ -123,11 +123,62 @@
               Заказать
             </a>
 
-            <div class="header__hamburger">
+            <div id="header-hamburger" class="header__hamburger">
               <div class="header__hamburger-item"></div>
               <div class="header__hamburger-item hamburger__topitem"></div>
               <div class="header__hamburger-item hamburger__bottomitem"></div>
+            </div>
+          </div>
 
+          <div class="header__hamburger-modal">
+            <div class="container container--modal">
+              <header class="modal__header">
+                <div class="modal__header-logo">
+                 <a href="index.html" class="modal__header-logolink">
+                  <img src="img/logo.png" alt="Бургер лого" class="modal__header-logopic">
+                </a>
+                </div>
+                <div class="modal__header-close">
+                  <a href="#" class="modal__header-closelink">
+                  <img src="img/icons/close.png" alt="закрыть">
+                </a>
+                </div>
+              </header>
+
+              <nav class="header__modal-menu ">
+                <ul class="header__menu-list">
+                  <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">
+                      О нас
+                    </a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">
+                      Бургеры
+                    </a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">
+                      Команда
+                    </a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">
+                      Меню
+                    </a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">
+                      Отзывы
+                    </a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
 
@@ -225,8 +276,8 @@
         <div class="slider__wrap">
           <ul class="slider__list">
             <li class="slider__item">
-              <div class="slider__icon-include">
-                <div class="slider__icon-drop">
+              <div class="slider__icon-include slider__icon--active">
+                <div class="slider__icon-drop ">
                   <ul class="slider__icon-droplist">
                     <li class="slider__icon-dropitem">
                       <div class="slider__icon-dropicon">
@@ -243,8 +294,8 @@
                           <use xlink:href="img/icons/sprite.svg#buns"></use>
                         </svg>
                       </div>
-                      <div class="slider__icon-ingridient">Говядина</div>
-                      <div class="slider__icon-dropweight">300 г</div>
+                      <div class="slider__icon-ingridient">Булочки</div>
+                      <div class="slider__icon-dropweight">100 г</div>
                     </li>
                     <li class="slider__icon-dropitem">
                       <div class="slider__icon-dropicon">
@@ -252,8 +303,8 @@
                           <use xlink:href="img/icons/sprite.svg#salad"></use>
                         </svg>
                       </div>
-                      <div class="slider__icon-ingridient">Говядина</div>
-                      <div class="slider__icon-dropweight">300 г</div>
+                      <div class="slider__icon-ingridient">Зелень</div>
+                      <div class="slider__icon-dropweight">70 г</div>
                     </li>
                     <li class="slider__icon-dropitem">
                       <div class="slider__icon-dropicon">
@@ -261,8 +312,8 @@
                           <use xlink:href="img/icons/sprite.svg#sauce"></use>
                         </svg>
                       </div>
-                      <div class="slider__icon-ingridient">Говядина</div>
-                      <div class="slider__icon-dropweight">300 г</div>
+                      <div class="slider__icon-ingridient">Соус</div>
+                      <div class="slider__icon-dropweight">150 г</div>
                     </li>
                     <li class="slider__icon-dropitem">
                       <div class="slider__icon-dropicon">
@@ -270,8 +321,8 @@
                           <use xlink:href="img/icons/sprite.svg#cucumber"></use>
                         </svg>
                       </div>
-                      <div class="slider__icon-ingridient">Говядина</div>
-                      <div class="slider__icon-dropweight">300 г</div>
+                      <div class="slider__icon-ingridient">Овощи</div>
+                      <div class="slider__icon-dropweight">200 г</div>
                     </li>
                     <li class="slider__icon-dropitem">
                       <div class="slider__icon-dropicon">
@@ -279,8 +330,8 @@
                           <use xlink:href="img/icons/sprite.svg#cheese"></use>
                         </svg>
                       </div>
-                      <div class="slider__icon-ingridient">Говядина</div>
-                      <div class="slider__icon-dropweight">300 г</div>
+                      <div class="slider__icon-ingridient">Сыр</div>
+                      <div class="slider__icon-dropweight">80 г</div>
                     </li>
                   </ul>
 
@@ -754,6 +805,7 @@
     </section>
 
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

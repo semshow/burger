@@ -381,6 +381,7 @@ textareafocus {
 }
 
 .header__menu-link {
+  font-family: 'Ubuntu', sans-serif;
   font-size: 0.8125rem;
   font-weight: 500;
   font-style: normal;
@@ -435,6 +436,73 @@ textareafocus {
   width: 1.5rem;
   border-radius: 0.3125rem;
   background-color: #ffffff;
+}
+
+.header__hamburger-modal {
+  padding-top: 0.8125rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #2f3234;
+  z-index: 30;
+}
+
+.modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__header-logo {
+  width: 5.75rem;
+  height: 4.3125rem;
+}
+
+.modal__header-logopic {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.header__modal-menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__modal-menu .header__menu-item {
+  display: block;
+  margin-right: 0;
+  text-align: center;
+}
+
+.header__modal-menu .header__menu-item:after {
+  display: block;
+  padding-left: 0;
+}
+
+.header__modal-menu .header__menu-link {
+  font-size: 1.5rem;
+}
+
+.header__modal-menu .header__menu-link:hover {
+  text-decoration: underline;
 }
 
 .team {
@@ -696,6 +764,7 @@ textareafocus {
           justify-content: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  padding-top: 5%;
 }
 
 @media screen and (max-width: 768px) {
@@ -818,11 +887,11 @@ textareafocus {
   display: none;
 }
 
-.slider__icon-active {
+.slider__icon--active {
   background-color: #e35028;
 }
 
-.slider__icon-active .slider__icon-drop {
+.slider__icon--active .slider__icon-drop {
   display: block;
 }
 
@@ -830,6 +899,8 @@ textareafocus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 1.125rem;
 }
 

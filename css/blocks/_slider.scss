@@ -61,6 +61,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  padding-top: 5%;
   @include tablets {
     flex-direction: column;
   }
@@ -148,16 +149,17 @@
   display: none;
 }
 
-.slider__icon-active {
+.slider__icon--active {
   background-color: rgba(227, 80, 40, 1);
 }
 
-.slider__icon-active .slider__icon-drop {
+.slider__icon--active .slider__icon-drop {
   display: block;
 }
 
 .slider__icon-dropitem {
   display: flex;
+  justify-content: space-around;
   margin-bottom: rem(18);
 }
 
