@@ -94,6 +94,8 @@
   height: rem(22);
   cursor: pointer;
   display: none;
+  background: transparent;
+  border: none;
 
   @include tablets {
     display: flex;
@@ -117,7 +119,11 @@
   right: 0;
   background-color: #2f3234;
   z-index: 30;
-  // display: none;
+  display: none;
+}
+
+.hamburger__modal--active {
+  display: block;
 }
 
 .modal__header {

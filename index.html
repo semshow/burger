@@ -123,14 +123,14 @@
               Заказать
             </a>
 
-            <div id="header-hamburger" class="header__hamburger">
+            <button type="button" id="buttonOpen" class="header__hamburger">
               <div class="header__hamburger-item"></div>
               <div class="header__hamburger-item hamburger__topitem"></div>
               <div class="header__hamburger-item hamburger__bottomitem"></div>
-            </div>
+            </button>
           </div>
 
-          <div class="header__hamburger-modal">
+          <div class="header__hamburger-modal" id="overlay">
             <div class="container container--modal">
               <header class="modal__header">
                 <div class="modal__header-logo">
@@ -139,7 +139,7 @@
                 </a>
                 </div>
                 <div class="modal__header-close">
-                  <a href="#" class="modal__header-closelink">
+                  <a href="#" class="modal__header-closelink" id="buttonClose">
                   <img src="img/icons/close.png" alt="закрыть">
                 </a>
                 </div>
@@ -148,32 +148,32 @@
               <nav class="header__modal-menu ">
                 <ul class="header__menu-list">
                   <li class="header__menu-item">
-                    <a href="#" class="header__menu-link">
+                    <a href="#" class="header__menu-link" id="link">
                       О нас
                     </a>
                   </li>
                   <li class="header__menu-item">
-                    <a href="#" class="header__menu-link">
+                    <a href="#" class="header__menu-link" id="link">
                       Бургеры
                     </a>
                   </li>
                   <li class="header__menu-item">
-                    <a href="#" class="header__menu-link">
+                    <a href="#" class="header__menu-link" id="link">
                       Команда
                     </a>
                   </li>
                   <li class="header__menu-item">
-                    <a href="#" class="header__menu-link">
+                    <a href="#" class="header__menu-link" id="link">
                       Меню
                     </a>
                   </li>
                   <li class="header__menu-item">
-                    <a href="#" class="header__menu-link">
+                    <a href="#" class="header__menu-link" id="link">
                       Отзывы
                     </a>
                   </li>
                   <li class="header__menu-item">
-                    <a href="#" class="header__menu-link">
+                    <a href="#" class="header__menu-link" id="link">
                       Контакты
                     </a>
                   </li>
@@ -276,7 +276,7 @@
         <div class="slider__wrap">
           <ul class="slider__list">
             <li class="slider__item">
-              <div class="slider__icon-include slider__icon--active">
+              <div class="slider__icon-include" id="sliderIcon">
                 <div class="slider__icon-drop ">
                   <ul class="slider__icon-droplist">
                     <li class="slider__icon-dropitem">
