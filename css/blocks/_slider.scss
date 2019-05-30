@@ -148,6 +148,19 @@
   border-radius: 5px;
   padding: rem(22) 0 0 rem(18);
   display: none;
+
+  @include tablets {
+    width: 350%;
+  }
+
+  @include phones {
+    width: 300%;
+    padding: rem(22) 0 0 0;
+  }
+
+  @include phones-small {
+    width: 260%;
+  }
 }
 
 .slider__icon--active {
@@ -168,6 +181,15 @@
   width: rem(44);
   height: rem(39);
   margin-right: rem(25);
+
+  @include phones {
+    margin-right: 0;
+  }
+
+  @include phones-small {
+    width: 25%;
+    height: rem(46);
+  }
 }
 
 .slider__dropicon-svg {
@@ -183,6 +205,14 @@
   line-height: 1.71;
   color: #2f3234;
   margin-right: rem(64);
+
+  @include phones {
+    margin-right: 0;
+  }
+  @include phones-small {
+    width: 40%;
+    margin-right: 0;
+  }
 }
 
 .slider__icon-dropweight {
@@ -192,6 +222,10 @@
   font-style: normal;
   line-height: 1.71;
   color: #2f3234;
+
+  @include phones-small {
+    width: 35%;
+  }
 }
 
 .slider__icon-pic {

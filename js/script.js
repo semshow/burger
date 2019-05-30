@@ -17,9 +17,11 @@ let menu = (function (options) {
 
   let addListeners = function () {
     buttonOpen.addEventListener('click', _toggleMenu);
-    let link = document.getElementById('link');
-
-    link.addEventListener('click', _toggleMenu);
+    let link = document.querySelectorAll('.header__menu-link');
+    for(var i=0; i<link.length; i++){
+      link[i].addEventListener('click', _toggleMenu)
+    }
+    // link.addEventListener('click', _toggleMenu);
     buttonClose.addEventListener('click', _toggleMenu);
   }
   return {
