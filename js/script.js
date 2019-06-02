@@ -52,28 +52,28 @@ sliderDrop.iconHover();
 
 //////аккордеон костыль
 
-// let teamAccordeon = () => {
-//   let teamList = document.querySelector('.team__accordeon');
-//   teamList.addEventListener('click', e => {
-//     e.preventDefault();
-//     let target = e.target;
-//     const accordeonItem = target.closest('.accordeon__item');
-//     const accordeonItems = document.querySelectorAll('.accordeon__item');
-//     if(target.className === 'accordeon__link'){
-//       if(!accordeonItem.classList.contains('accordeon__item--active')){
-//         for(let i = 0; i < accordeonItems.length; i++ ){
-//             accordeonItems[i].classList.remove('accordeon__item--active');
-//         }
-//         accordeonItem.classList.add('accordeon__item--active');
-//       }
-//       else {
-//         accordeonItem.classList.remove('accordeon__item--active');
-//       }
-//     } 
-//   });
-// };
+let teamAccordeon = () => {
+  let teamList = document.querySelector('.team__accordeon');
+  teamList.addEventListener('click', e => {
+    e.preventDefault();
+    let target = e.target;
+    const accordeonItem = target.closest('.accordeon__item');
+    const accordeonItems = document.querySelectorAll('.accordeon__item');
+    if(target.className === 'accordeon__link'){
+      if(!accordeonItem.classList.contains('accordeon__item--active')){
+        for(let i = 0; i < accordeonItems.length; i++ ){
+            accordeonItems[i].classList.remove('accordeon__item--active');
+        }
+        accordeonItem.classList.add('accordeon__item--active');
+      }
+      else {
+        accordeonItem.classList.remove('accordeon__item--active');
+      }
+    } 
+  });
+};
 
-// teamAccordeon();
+teamAccordeon();
 
 
 ////аккордеон норм 
@@ -105,26 +105,26 @@ sliderDrop.iconHover();
 
 //////Аккордеон Мелюков
 
-const element = document.querySelector(".team__accordeon");
+// const element = document.querySelector(".team__accordeon");
 
-createAccordeon(element);
+// createAccordeon(element);
 
-function createAccordeon(element) {
-  let lastActive;
+// function createAccordeon(element) {
+//   let lastActive;
 
-  // element.classList.add("accordeon");
-  element.addEventListener("click", function (e) {
-    e.preventDefault();
-    if (e.target.classList.contains("accordeon__link")) {
-      if (lastActive) {
-        lastActive.classList.remove("accordeon__item--active");
-      }
+//   // element.classList.add("accordeon");
+//   element.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     if (e.target.classList.contains("accordeon__link")) {
+//       if (lastActive) {
+//         lastActive.classList.remove("accordeon__item--active");
+//       }
 
-      lastActive = e.target.parentNode;
-      lastActive.classList.add("accordeon__item--active");
-    }
-  });
-}
+//       lastActive = e.target.parentNode;
+//       lastActive.classList.add("accordeon__item--active");
+//     }
+//   });
+// }
 
 
 ///////////////////////Меню аккордеон
