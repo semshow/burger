@@ -282,6 +282,19 @@ footer {
   vertical-align: baseline;
 }
 
+.btn--order {
+  width: 6.0625rem;
+  margin-top: 0.875rem;
+  margin-right: 1.25rem;
+  border: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .btn--order {
+    margin-right: 0;
+  }
+}
+
 input,
 textarea {
   outline: none;
@@ -758,7 +771,6 @@ textareafocus {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  left: 0;
 }
 
 .slider__item {
@@ -1797,18 +1809,6 @@ textareafocus {
   .order__form-nocall {
     margin: 0;
     margin-top: 0.625rem;
-  }
-}
-
-.btn--order {
-  width: 6.0625rem;
-  margin-top: 0.875rem;
-  margin-right: 1.25rem;
-}
-
-@media screen and (max-width: 480px) {
-  .btn--order {
-    margin-right: 0;
   }
 }
 

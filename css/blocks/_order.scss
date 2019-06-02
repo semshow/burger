@@ -202,15 +202,7 @@
   }
 }
 
-.btn--order {
-  width: rem(97);
-  margin-top: rem(14);
-  margin-right: rem(20);
 
-  @include phones {
-    margin-right: 0;
-  }
-}
 
 .order__form-nocallinput {
   display: none;

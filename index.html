@@ -413,7 +413,7 @@
     <section class="section team">
       <div class="team__content">
         <h2 class="title title--team">Команда</h2>
-        <ul class="team__accordeon accordeon">
+        <ul class="team__accordeon">
 
           <li class="accordeon__item">
             <a href="#" class="accordeon__link">
@@ -433,7 +433,7 @@
               </div>
             </div>
           </li>
-          <li class="accordeon__item accordeon__item--active">
+          <li class="accordeon__item">
             <a href="#" class="accordeon__link">
               Ричард Джеймс
             </a>
@@ -495,9 +495,9 @@
       <h2 class="title title--menu">Меню</h2>
       <ul class="menu__accordeon">
         <li class="menu__accordeon-item menu--meat ">
-          <div class="menu__accordeon-top">
+          <a href="#" class="menu__accordeon-top">
             <h3 class="menu__accordeon-title title">для мясоедов</h3>
-          </div>
+          </a>
           <div class="menu__accordeon-hide">
             <div class="menu__accordeon-text ">
               Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
@@ -514,9 +514,9 @@
           </div>
         </li>
         <li class="menu__accordeon-item menu--veg menu__accordeon-item--active">
-          <div class="menu__accordeon-top">
+          <a href="#" class="menu__accordeon-top">
             <h3 class="menu__accordeon-title title">вегетарианское</h3>
-          </div>
+          </a>
           <div class="menu__accordeon-hide">
             <div class="menu__accordeon-text">
               Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
@@ -533,9 +533,9 @@
           </div>
         </li>
         <li class="menu__accordeon-item menu--diet">
-          <div class="menu__accordeon-top">
+          <a href="#" class="menu__accordeon-top">
             <h3 class="menu__accordeon-title title">диетическое</h3>
-          </div>
+          </a>
           <div class="menu__accordeon-hide">
             <div class="menu__accordeon-text">
               Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
@@ -692,13 +692,13 @@
         <form action="#" method="post" class="order__form">
           <div class="order__form-text">
             <div class="order__form-name">
-              <label for="name" class="order__form-line order__form-nameline">
+              <label for="name" class="order__form-line order__form-nameline" >
                 <p> Имя</p>
-                <input id="name" type="text" class="order__input">
+                <input id="name" type="text" class="order__input" name="name" required>
               </label>
               <label for="phone" class="order__form-line">
                 <p>Телефон</p>
-                <input id="phone" type="text" class="order__input">
+                <input id="phone" type="text" class="order__input" name="phone" required>
               </label>
             </div>
 
@@ -706,29 +706,29 @@
               <p class="order__form-streettitle">
                 Улица
               </p>
-              <input id="street" type="text" class="order__input">
+              <input id="street" type="text" class="order__input" name="street">
             </label>
 
             <div class="order__form-houseline">
 
               <label class="order__form-houselineblock" for="house">
                 <p>Дом</p>
-                <input id="house" type="text" class="order__input">
+                <input id="house" type="text" class="order__input" name="house">
               </label>
 
               <label for="house-block" class="order__form-houselineblock">
                 <p>Корпус</p>
-                <input id="house-block" type="text" class="order__input">
+                <input id="house-block" type="text" class="order__input" name="block">
               </label>
 
               <label for="apartment" class="order__form-houselineblock">
                 <p>Квартира</p>
-                <input id="apartment" type="text" class="order__input">
+                <input id="apartment" type="text" class="order__input" name="apartment">
               </label>
 
               <label for="stage" class="order__form-stage">
                 <p>Этаж</p>
-                <input id="stage" type="text" class="order__input">
+                <input id="stage" type="text" class="order__input" name="level">
               </label>
 
             </div>
@@ -739,7 +739,7 @@
                 Комментарий
               </p>
               <textarea name="comments" id="comments" cols="30" rows="10"
-                class="order__input order__input-textarea"></textarea>
+                class="order__input order__input-textarea" required></textarea>
             </div>
             <div class="order__form-checkboxline">
               <label for="rest" class="order__form-rest">
@@ -754,11 +754,11 @@
               </label>
             </div>
             <label for="nocall" class="order__form-nocall">
-              <input type="checkbox" id="nocall" class="order__form-nocallinput">
+              <input type="checkbox" id="nocall" class="order__form-nocallinput" name="nocallback">
               <span class="order__form-arrowcheckbox"></span>
               Не перезванивать
             </label>
-            <a href="#" class="btn btn--order">заказать</a>Очистить
+            <button href="#" class="btn btn--order">заказать</button>Очистить
           </div>
         </form>
       </div>
