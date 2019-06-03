@@ -1,3 +1,5 @@
+
+//***********************/HAMBURGER MENU**********************
 let obj = {
   buttonOpen: '#buttonOpen',
   buttonClose: '#buttonClose',
@@ -50,7 +52,7 @@ let sliderDrop = (function (details) {
 
 sliderDrop.iconHover();
 
-//////аккордеон костыль
+//********************аккордеон костыль************
 
 let teamAccordeon = () => {
   let teamList = document.querySelector('.team__accordeon');
@@ -59,24 +61,24 @@ let teamAccordeon = () => {
     let target = e.target;
     const accordeonItem = target.closest('.accordeon__item');
     const accordeonItems = document.querySelectorAll('.accordeon__item');
-    if(target.className === 'accordeon__link'){
-      if(!accordeonItem.classList.contains('accordeon__item--active')){
-        for(let i = 0; i < accordeonItems.length; i++ ){
-            accordeonItems[i].classList.remove('accordeon__item--active');
+    if (target.className === 'accordeon__link') {
+      if (!accordeonItem.classList.contains('accordeon__item--active')) {
+        for (let i = 0; i < accordeonItems.length; i++) {
+          accordeonItems[i].classList.remove('accordeon__item--active');
         }
         accordeonItem.classList.add('accordeon__item--active');
       }
       else {
         accordeonItem.classList.remove('accordeon__item--active');
       }
-    } 
+    }
   });
 };
 
 teamAccordeon();
 
 
-////аккордеон норм 
+//***************************аккордеон норм *****************
 
 // let teamAccordeon = () => {
 //   let accordeonLink = document.querySelectorAll('.accordeon__link');
@@ -167,7 +169,7 @@ menuAccordeon();
 
 ///////////// slider
 
-const slide = (function() {
+const slide = (function () {
   const left = document.querySelector('.slider__left');
   const right = document.querySelector('.slider__right');
   const slider = document.querySelector('.slider__list');
@@ -180,7 +182,7 @@ const slide = (function() {
     direction.addEventListener('click', function (e) {
       e.preventDefault();
       let currentRight = parseInt(computed.right);
-      console.log (currentRight);
+      console.log(currentRight);
 
       if (currentRight < (sliderItemCounter - 1) * sliderWidth && direction == right) {
         slider.style.right = currentRight + sliderWidth + "px";
@@ -207,28 +209,73 @@ slide.init();
 
 const myForm = document.querySelector('.order__form');
 const sendButton = document.querySelector('.btn--order');
-
-sendButton.addEventListener('click', function(e){
-  event.preventDefault();
-
+myForm.addEventListener('click', function(e){
+  e.preventDefault();
   let formData = new FormData();
-  formData.append("name", myForm.elements.name.value); 
-  formData.append("phone", myForm.elements.phone.value); 
-  formData.append("comments", myForm.elements.comments.value); 
-  formData.append("to", "semshow@mail.ru"); 
+  formData.append("name", myForm.elements.name.value);
+  formData.append("phone", myForm.elements.phone.value);
+  formData.append("comments", myForm.elements.comments.value);
+  formData.append("to", "semshow@mail.ru");
 
   const xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
-  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/');
+  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
   xhr.send(JSON.stringify(formData));
-  xhr.addEventListener('load', ()=>{
-    console.log(xhr.response);
-  });
+
+  return xhr;
 });
 
 
+// var submitForm = function (e) {
+//   e.preventDefault();
+//   var form = e.target;
+//   let request = ajaxForm(form);
+//   request.addEventListener('load', () => {
+//     if (request.status >= 400) {
+//       let content = 'Ошибка соединения с сервером, попробуйте позже';
+//       overlay.open('#modal__review', `${content}. Ошибка ${request.status}`);
+//     }
+//     else {
+//       let content = request.response.message;
+//       overlay.open('#modal__review', content);
+//     }
+//   });
+// }
 
+//**********************AJAX AND MODAL************** */
 
+// const overlay = (function () {
+//   let body = document.querySelector('body');
+//   let link = ocument.createElement('a');
+//   link.classList.add('modal__review-close');
+//   link.setAttribute('href', '#');
 
+//   let openOverlay = function (modalId, content) {
+//     let overlay = document.querySelector(modalId);
+//     let innerOverlay = document.querySelector('.modal__review-inner');
+//     if (content) {
+//       innetOverlay.innerHTML = conent;
+//     }
+//     innetOverlay.appendChild(link);
 
+//     overlay.classList.add('is-active');
+//     body.classList.add('locked');
 
+//     link.addEventListener('click', (e) => {
+//       e.preventDefault();
+//       closeOverlay(modalId);
+//     })
+
+//     overlay.addEventListener('click', (e) => {
+//       e.preventDefault();
+//       if (e.target === overlay) {
+//         closeOverlay(modalId);
+//       }
+//     })
+
+//     document.addEventListener('keydown', function (e) {
+//       if (e.keyCode == 27) closeOverlay(modalId);
+//     });
+//   }
+// });
