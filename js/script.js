@@ -209,19 +209,19 @@ slide.init();
 
 const myForm = document.querySelector('.order__form');
 const sendButton = document.querySelector('.btn--order');
-myForm.addEventListener('click', function(e){
+myForm.addEventListener('submit', function(e){
   e.preventDefault();
   let formData = new FormData();
   formData.append("name", myForm.elements.name.value);
   formData.append("phone", myForm.elements.phone.value);
-  formData.append("comments", myForm.elements.comments.value);
+  formData.append("comment", myForm.elements.comments.value);
   formData.append("to", "semshow@mail.ru");
 
   const xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
-  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/');
+  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/failgit ');
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-  xhr.send(JSON.stringify(formData));
+  xhr.send(formData);
 
   return xhr;
 });
