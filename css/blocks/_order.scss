@@ -238,23 +238,19 @@
 }
 
 .order__modal {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: rem(380);
   border-radius: 5px;
   box-shadow: 0 0 40px 0 rgba(0, 0, 1, 0.5);
   background-color: $white;
   padding: rem(20) rem(14) rem(20) rem(14);
-  display: none;
-  &--is-active {
-    display: flex;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .order__modal-text {
@@ -266,4 +262,18 @@
   color: #2f3234;
   margin-bottom: rem(17);
   text-align: center;
+}
+
+.modal__open {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(47, 50, 52, 0.9);
+  display: none;
+}
+
+.modal__open--active {
+  display: block;
 }

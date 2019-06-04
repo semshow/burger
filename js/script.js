@@ -147,14 +147,14 @@ let menuAccordeon = () => {
       e.preventDefault();
       let activePerson = document.querySelector('.menu__accordeon-item.menu__accordeon-item--active');
       if (activePerson) {
-        let menuAccordeonItem = document.querySelector('.menu__accordeon-hide');
+        let menuAccordeonItem = activePerson.querySelector('.menu__accordeon-hide');
         menuAccordeonItem.style.width = "0px";
         activePerson.classList.remove('menu__accordeon-item--active');
       }
 
       if (!activePerson || activePerson.querySelector('.menu__accordeon-top') !== this) {
         let currentPerson = this.closest('.menu__accordeon-item');
-        currentPerson.classList.remove('menu__accordeon-item--active');
+        currentPerson.classList.add('menu__accordeon-item--active');
 
         let currentPersonInfo = currentPerson.querySelector('.menu__accordeon-hide');
         currentPersonInfo.style.width = calculateWidth() + 'px';
@@ -214,7 +214,7 @@ var ajaxForm = function(form){
   formData.append("to", "semshow@mail.ru");
     
 
-  let url = "https://webdev-api.loftschool.com/sendmailfail";
+  let url = "https://webdev-api.loftschool.com/sendmail";
 
   const xhr = new XMLHttpRequest();
   xhr.responseType = "json";
@@ -234,11 +234,11 @@ var submitForm = function (e) {
   request.addEventListener('load', () => {
     if (request.status >= 400) {
       let content = 'Ошибка соединения с сервером, попробуйте позже';
-      overlay.open('.order__modal', `${content}. Ошибка ${request.status}`);
+      overlay.open('.modal__open', `${content}. Ошибка ${request.status}`);
     }
     else {
       let content = request.response.message;
-      overlay.open('.order__modal', content);
+      overlay.open('.modal__open', content);
     }
   });
 }
@@ -255,9 +255,9 @@ let reviewOpen = function(){
   container.addEventListener('click',function(e){
     e.preventDefault();
     let target = e.target;
-    if(target.className = button.className){
+    if(target.className == button.className){
       let content = document.querySelector('#overlay1').innerHTML;
-      overlay.open('.order__modal', content);
+      overlay.open('.modal__open', content);
     }
   });
 }
@@ -277,7 +277,7 @@ const overlay = (function () {
       innerOverlay.innerHTML = content;
     }
 
-    overlay.classList.add('order__modal--is-active');
+    overlay.classList.add('modal__open--active');
     body.classList.add('body--locked');
 
     link.addEventListener('click', (e) => {
@@ -299,7 +299,7 @@ const overlay = (function () {
 
   let closeOverlay = function(modalId){
     let overlay = document.querySelector(modalId);
-    overlay.classList.remove('order__modal--is-active');
+    overlay.classList.remove('modal__open--active');
     body.classList.remove('body--locked');
   }
 
