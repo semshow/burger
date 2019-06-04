@@ -134,14 +134,14 @@
             <div class="container container--modal">
               <header class="modal__header">
                 <div class="modal__header-logo">
-                 <a href="index.html" class="modal__header-logolink">
-                  <img src="img/logo.png" alt="Бургер лого" class="modal__header-logopic">
-                </a>
+                  <a href="index.html" class="modal__header-logolink">
+                    <img src="img/logo.png" alt="Бургер лого" class="modal__header-logopic">
+                  </a>
                 </div>
                 <div class="modal__header-close">
                   <a href="#" class="modal__header-closelink" id="buttonClose">
-                  <img src="img/icons/close.png" alt="закрыть">
-                </a>
+                    <img src="img/icons/close.png" alt="закрыть">
+                  </a>
                 </div>
               </header>
 
@@ -692,7 +692,7 @@
         <form action="#" method="post" class="order__form">
           <div class="order__form-text">
             <div class="order__form-name">
-              <label for="name" class="order__form-line order__form-nameline" >
+              <label for="name" class="order__form-line order__form-nameline">
                 <p> Имя</p>
                 <input id="name" type="text" class="order__input" name="name" required>
               </label>
@@ -738,8 +738,8 @@
               <p>
                 Комментарий
               </p>
-              <textarea name="comments" id="comments" cols="30" rows="10"
-                class="order__input order__input-textarea" required></textarea>
+              <textarea name="comments" id="comments" cols="30" rows="10" class="order__input order__input-textarea"
+                required></textarea>
             </div>
             <div class="order__form-checkboxline">
               <label for="rest" class="order__form-rest">
@@ -761,9 +761,12 @@
             <button href="#" class="btn btn--order">заказать</button>Очистить
           </div>
         </form>
+        <div class="modal__review" id="modal__review">
+          <div class="modal__review-inner"></div>
+        </div> 
         <div class="order__modal">
           <div class="order__modal-text">Сообщение отправлено</div>
-          <a href="index.html" class="btn">Закрыть</a>
+          <a href="index.html" class="btn btn--close">Закрыть</a>
         </div>
       </div>
     </section>
@@ -810,6 +813,12 @@
 
   </div>
   <script src="js/script.js"></script>
+  <script type="template" id="overlay1">
+    <div class="reviews__item-title reviews__modal-title">Константин Спилберг</div>
+    <div class="reviews__item-text reviews__modal-text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
+      не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+  </script>
+
 </body>
 
 </html>

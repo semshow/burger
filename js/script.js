@@ -205,77 +205,106 @@ const slide = (function () {
 
 slide.init();
 
-//////////////********FORM********************** 
-
-const myForm = document.querySelector('.order__form');
-const sendButton = document.querySelector('.btn--order');
-myForm.addEventListener('submit', function(e){
-  e.preventDefault();
+//////////////********AJAX ********************** 
+var ajaxForm = function(form){
   let formData = new FormData();
-  formData.append("name", myForm.elements.name.value);
-  formData.append("phone", myForm.elements.phone.value);
-  formData.append("comment", myForm.elements.comments.value);
+  formData.append("name", form.elements.name.value);
+  formData.append("phone", form.elements.phone.value);
+  formData.append("comment", form.elements.comments.value);
   formData.append("to", "semshow@mail.ru");
+    
+
+  let url = "https://webdev-api.loftschool.com/sendmailfail";
 
   const xhr = new XMLHttpRequest();
-  xhr.responseType = 'json';
-  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/failgit ');
-  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+  xhr.responseType = "json";
+  xhr.open("POST", url);
+  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
   xhr.send(formData);
 
   return xhr;
-});
+}
 
+//////*****************OPEN FORM */
 
-// var submitForm = function (e) {
-//   e.preventDefault();
-//   var form = e.target;
-//   let request = ajaxForm(form);
-//   request.addEventListener('load', () => {
-//     if (request.status >= 400) {
-//       let content = 'Ошибка соединения с сервером, попробуйте позже';
-//       overlay.open('#modal__review', `${content}. Ошибка ${request.status}`);
-//     }
-//     else {
-//       let content = request.response.message;
-//       overlay.open('#modal__review', content);
-//     }
-//   });
-// }
+var submitForm = function (e) {
+  e.preventDefault();
+  var form = e.target;
+  let request = ajaxForm(form);
+  request.addEventListener('load', () => {
+    if (request.status >= 400) {
+      let content = 'Ошибка соединения с сервером, попробуйте позже';
+      overlay.open('.order__modal', `${content}. Ошибка ${request.status}`);
+    }
+    else {
+      let content = request.response.message;
+      overlay.open('.order__modal', content);
+    }
+  });
+}
 
-//**********************AJAX AND MODAL************** */
+let myForm= document.querySelector('.order__form');
+myForm.addEventListener('submit', submitForm);
 
-// const overlay = (function () {
-//   let body = document.querySelector('body');
-//   let link = ocument.createElement('a');
-//   link.classList.add('modal__review-close');
-//   link.setAttribute('href', '#');
+///////******************OPEN REVIEW */
 
-//   let openOverlay = function (modalId, content) {
-//     let overlay = document.querySelector(modalId);
-//     let innerOverlay = document.querySelector('.modal__review-inner');
-//     if (content) {
-//       innetOverlay.innerHTML = conent;
-//     }
-//     innetOverlay.appendChild(link);
+let reviewOpen = function(){
+  let button = document.querySelector('.reviews__item-button');
+  let container = document.querySelector('.reviews__list');
 
-//     overlay.classList.add('is-active');
-//     body.classList.add('locked');
+  container.addEventListener('click',function(e){
+    e.preventDefault();
+    let target = e.target;
+    if(target.className = button.className){
+      let content = document.querySelector('#overlay1').innerHTML;
+      overlay.open('.order__modal', content);
+    }
+  });
+}
 
-//     link.addEventListener('click', (e) => {
-//       e.preventDefault();
-//       closeOverlay(modalId);
-//     })
+reviewOpen();
 
-//     overlay.addEventListener('click', (e) => {
-//       e.preventDefault();
-//       if (e.target === overlay) {
-//         closeOverlay(modalId);
-//       }
-//     })
+//**********************MODAL WINDOW OPEN AND CLOSE************** */
 
-//     document.addEventListener('keydown', function (e) {
-//       if (e.keyCode == 27) closeOverlay(modalId);
-//     });
-//   }
-// });
+const overlay = (function () {
+  let body = document.querySelector('body');
+  let link = document.querySelector('.btn--close')
+
+  let openOverlay = function (modalId, content) {
+    let overlay = document.querySelector(modalId);
+    let innerOverlay = document.querySelector('.order__modal-text');
+    if (content) {
+      innerOverlay.innerHTML = content;
+    }
+
+    overlay.classList.add('order__modal--is-active');
+    body.classList.add('body--locked');
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeOverlay(modalId);
+    })
+
+    overlay.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (e.target === overlay) {
+        closeOverlay(modalId);
+      }
+    })
+
+    document.addEventListener('keydown', function (e) {
+      if (e.keyCode == 27) closeOverlay(modalId);
+    });
+  }
+
+  let closeOverlay = function(modalId){
+    let overlay = document.querySelector(modalId);
+    overlay.classList.remove('order__modal--is-active');
+    body.classList.remove('body--locked');
+  }
+
+  return {
+    open: openOverlay,
+    close: closeOverlay
+  }
+})();

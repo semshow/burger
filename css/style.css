@@ -32,6 +32,10 @@ body {
   height: 100%;
 }
 
+.body--locked {
+  overflow: hidden;
+}
+
 .body-active-menu {
   overflow: hidden;
 }
@@ -1506,6 +1510,12 @@ textareafocus {
   }
 }
 
+.reviews__modal-title {
+  color: #2f3234;
+  text-align: center;
+  margin-bottom: 0;
+}
+
 .reviews__item-text {
   font-family: 'Ubuntu', sans-serif;
   font-size: 0.875rem;
@@ -1521,6 +1531,10 @@ textareafocus {
   .reviews__item-text {
     display: none;
   }
+}
+
+.reviews__modal-text {
+  color: #2f3234;
 }
 
 .reviews__item-button {
@@ -1847,6 +1861,11 @@ textareafocus {
 }
 
 .order__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1860,13 +1879,19 @@ textareafocus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 12.25rem;
+  width: 23.75rem;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 1, 0.5);
           box-shadow: 0 0 40px 0 rgba(0, 0, 1, 0.5);
   background-color: #ffffff;
   padding: 1.25rem 0.875rem 1.25rem 0.875rem;
   display: none;
+}
+
+.order__modal--is-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .order__modal-text {
@@ -1877,6 +1902,7 @@ textareafocus {
   letter-spacing: normal;
   color: #2f3234;
   margin-bottom: 1.0625rem;
+  text-align: center;
 }
 
 .map {
