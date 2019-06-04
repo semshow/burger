@@ -169,50 +169,100 @@ menuAccordeon();
 
 ///////////// slider
 
-const slide = (function () {
-  const left = document.querySelector('.slider__left');
-  const right = document.querySelector('.slider__right');
-  const slider = document.querySelector('.slider__list');
-  const computed = getComputedStyle(slider);
-  let sliderWidth = parseInt(computed.width);
+// const slide = (function () {
+//   const left = document.querySelector('.slider__left');
+//   const right = document.querySelector('.slider__right');
+//   const slider = document.querySelector('.slider__list');
+//   const computed = getComputedStyle(slider);
+//   let sliderWidth = parseInt(computed.width);
 
-  var sliderItemCounter = slider.children.length;
+//   var sliderItemCounter = slider.children.length;
 
-  let moveSlide = function (direction) {
-    direction.addEventListener('click', function (e) {
-      e.preventDefault();
-      let currentRight = parseInt(computed.right);
-      console.log(currentRight);
+//   let moveSlide = function (direction) {
+//     direction.addEventListener('click', function (e) {
+//       e.preventDefault();
+//       let currentRight = parseInt(computed.right);
+//       console.log(currentRight);
 
-      if (currentRight < (sliderItemCounter - 1) * sliderWidth && direction == right) {
-        slider.style.right = currentRight + sliderWidth + "px";
-        console.log(slider.style.right);
-      }
+//       if (currentRight < (sliderItemCounter - 1) * sliderWidth && direction == right) {
+//         slider.style.right = currentRight + sliderWidth + "px";
+//         console.log(slider.style.right);
+//       }
 
-      if (currentRight > 0 && direction == left) {
-        slider.style.right = currentRight - sliderWidth + "px";
-      }
-    });
+//       if (currentRight > 0 && direction == left) {
+//         slider.style.right = currentRight - sliderWidth + "px";
+//       }
+//     });
+//   }
+
+//   let addListeners = function () {
+//     moveSlide(right);
+//     moveSlide(left);
+//   }
+
+//   return { init: addListeners }
+// })();
+
+// slide.init();
+
+
+///********************SLIDER JQUERY */
+$(function () {
+
+  var moveSlide = function (container, slideNum) {
+    items = container.find('.slider__item'),
+      activeSlide = items.filter('.slider__active'),
+      reqItem = items.eq(slideNum),
+      reqIndex = reqItem.index(),
+      list = container.find('.slider__list'),
+      duration = 500;
+
+    if (reqItem.length) {
+      list.animate({
+        'left': -reqIndex * 100 + '%'
+      }, duration, function () {
+        activeSlide.removeClass('slider__active');
+        reqItem.addClass('slider__active');
+      });
+    }
   }
 
-  let addListeners = function () {
-    moveSlide(right);
-    moveSlide(left);
-  }
+  $('.slider__arrow').on('click', function (e) {
+    e.preventDefault();
+    var $this = $(this),
+      container = $('.slider__wrap'),
+      items = container.find('.slider__item'),
+      activeItem = items.filter('.slider__active'),
+      nextItem = activeItem.next(),
+      prevItem = activeItem.prev();
 
-  return { init: addListeners }
-})();
+    if ($this.hasClass('slider__right')) {
+      if (nextItem.length) {
+        moveSlide(container, nextItem.index());
+      } else {
+        moveSlide(container, items.first().index());
+      }
 
-slide.init();
+    }
+    if ($this.hasClass('slider__left')) {
+      if (prevItem.length) {
+        moveSlide(container, prevItem.index());
+      } else {
+        moveSlide(container, items.last().index());
+      }
+    }
+  });
+});
+
 
 //////////////********AJAX ********************** 
-var ajaxForm = function(form){
+var ajaxForm = function (form) {
   let formData = new FormData();
   formData.append("name", form.elements.name.value);
   formData.append("phone", form.elements.phone.value);
   formData.append("comment", form.elements.comments.value);
   formData.append("to", "semshow@mail.ru");
-    
+
 
   let url = "https://webdev-api.loftschool.com/sendmail";
 
@@ -243,19 +293,19 @@ var submitForm = function (e) {
   });
 }
 
-let myForm= document.querySelector('.order__form');
+let myForm = document.querySelector('.order__form');
 myForm.addEventListener('submit', submitForm);
 
 ///////******************OPEN REVIEW */
 
-let reviewOpen = function(){
+let reviewOpen = function () {
   let button = document.querySelector('.reviews__item-button');
   let container = document.querySelector('.reviews__list');
 
-  container.addEventListener('click',function(e){
+  container.addEventListener('click', function (e) {
     e.preventDefault();
     let target = e.target;
-    if(target.className == button.className){
+    if (target.className == button.className) {
       let content = document.querySelector('#overlay1').innerHTML;
       overlay.open('.modal__open', content);
     }
@@ -297,7 +347,7 @@ const overlay = (function () {
     });
   }
 
-  let closeOverlay = function(modalId){
+  let closeOverlay = function (modalId) {
     let overlay = document.querySelector(modalId);
     overlay.classList.remove('modal__open--active');
     body.classList.remove('body--locked');
