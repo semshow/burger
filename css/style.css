@@ -78,7 +78,16 @@ footer {
   position: relative;
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
+}
+
+#content {
+  height: 100vh;
+  min-height: 40.625rem;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+  will-change: transform;
 }
 
 .container {

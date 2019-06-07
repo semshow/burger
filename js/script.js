@@ -358,3 +358,94 @@ const overlay = (function () {
     close: closeOverlay
   }
 })();
+
+
+//*****************ONE PAGE SCROLL */
+
+
+// var md = new MobileDetect(window.navigator.userAgent),
+// isMobile = md.mobile();
+
+let OnePageScroll = function () {
+  const sections = $('.section');
+  const visible = $('#content');
+  let inscroll = false;
+
+  let performTransition = function (sectionEq) {
+
+    if (!inscroll) {
+      inscroll = true;
+      let position = sectionEq * -100 + '%';
+
+      sections.eq(sectionEq).addClass('section__active').siblings().removeClass('section__active');
+
+      visible.css({
+        transform: `translateY(${position}`,
+        "-webkit-transform": `translateY(${position})`
+      });
+
+      setTimeout(function () {
+        inscroll = false;
+        $(".scroller__link")
+          .eq(sectionEq)
+          .addClass("scroller__link--active")
+          .siblings()
+          .removeClass("scroller__link--active");
+      }, 1000);
+    }
+  }
+
+  let defineSections = function (sectionsList) {
+    let activeSection = sectionsList.filter(".section__active")
+    return {
+      activeSection: activeSection,
+      nextSection: activeSection.next(),
+      prevSection: activeSection.prev()
+    };
+  };
+
+  let scrollToSection = function (direction) {
+    let section = defineSections(sections);
+    if (direction === 'up' && section.nextSection.length) {
+      performTransition(section.nextSection.index());
+    }
+
+    if (direction === 'down' && section.prevSection.length) {
+      performTransition(section.prevSection.index());
+    }
+  };
+
+
+  $(".wrapper").on({
+    wheel: function (e) {
+      const deltaY = e.originalEvent.deltaY;
+      const direction = deltaY > 0 ? "up" : "down";
+      scrollToSection(direction);
+    }
+  })
+
+  $("[data-scroll-to]").on('click', e => {
+    e.preventDefault();
+    performTransition(parseInt($(e.target).data("scroll-to")));
+  })
+}
+
+OnePageScroll();
+
+//*******************YANDEX MAP****************** */
+
+ymaps.ready(init);
+function init() {
+  var map = new ymaps.Map('map', {
+    center: [59.94, 30.32],
+    zoom: 12,
+    controls: ['zoomControl'],
+    behaviors: ['drag']
+  });
+  var placemark = new ymaps.Placemark([59.97, 30.31],{
+    hitContent: 'Это хинт',
+    balloonContent: 'Это балун'
+  })
+  map.geoObjects.add(placemark);
+}
+
