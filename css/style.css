@@ -77,12 +77,12 @@ footer {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-#content {
-  height: 100vh;
-  min-height: 40.625rem;
+.content {
+  height: 100%;
   -webkit-transition: -webkit-transform 0.7s;
   transition: -webkit-transform 0.7s;
   transition: transform 0.7s;
@@ -1922,8 +1922,12 @@ textareafocus {
 }
 
 .map {
-  background: url(../img/map.jpg) center center/cover no-repeat;
   position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
@@ -2065,7 +2069,7 @@ textareafocus {
   position: relative;
 }
 
-.scroller__link--active {
+.scroller__item--active .scroller__link {
   border: solid 0.0625rem #ffffff;
 }
 

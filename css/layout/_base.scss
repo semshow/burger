@@ -59,13 +59,12 @@ footer {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
-  // overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
-#content {
-  height: 100vh;
-  min-height: rem(650);
+.content {
+  height: 100%;
   transition: transform 0.7s;
   will-change: transform;
 }

@@ -19,7 +19,7 @@ let menu = (function (options) {
 
   let addListeners = function () {
     buttonOpen.addEventListener('click', _toggleMenu);
-    let link = document.querySelectorAll('.header__menu-link');
+    let link = document.querySelectorAll('#link');
     for (var i = 0; i < link.length; i++) {
       link[i].addEventListener('click', _toggleMenu)
     }
@@ -32,7 +32,7 @@ let menu = (function (options) {
 })(obj);
 
 menu.openMenu();
-
+//***************************SLIDER */
 
 let sliderDrop = (function (details) {
   let iconButton = document.querySelector('#sliderIcon');
@@ -366,75 +366,103 @@ const overlay = (function () {
 // var md = new MobileDetect(window.navigator.userAgent),
 // isMobile = md.mobile();
 
-let OnePageScroll = function () {
-  const sections = $('.section');
-  const visible = $('#content');
-  let inscroll = false;
+// let OnePageScroll = function () {
+//   const sections = $('.section');
+//   const visible = $('#content');
+//   let inscroll = false;
 
-  let performTransition = function (sectionEq) {
+//   let performTransition = function (sectionEq) {
 
-    if (!inscroll) {
-      inscroll = true;
-      let position = sectionEq * -100 + '%';
+//     if (!inscroll) {
+//       inscroll = true;
+//       let position = sectionEq * -100 + '%';
 
-      sections.eq(sectionEq).addClass('section__active').siblings().removeClass('section__active');
+//       sections.eq(sectionEq).addClass('section__active').siblings().removeClass('section__active');
 
-      visible.css({
-        transform: `translateY(${position}`,
-        "-webkit-transform": `translateY(${position})`
-      });
+//       visible.css({
+//         transform: `translateY(${position}`,
+//         "-webkit-transform": `translateY(${position})`
+//       });
 
-      setTimeout(function () {
-        inscroll = false;
-        $(".scroller__link")
-          .eq(sectionEq)
-          .addClass("scroller__link--active")
-          .siblings()
-          .removeClass("scroller__link--active");
-      }, 1000);
-    }
-  }
+//       setTimeout(function () {
+//         inscroll = false;
+//         $(".scroller__link")
+//           .eq(sectionEq)
+//           .addClass("scroller__link--active")
+//           .siblings()
+//           .removeClass("scroller__link--active");
+//       }, 1000);
+//     }
+//   }
 
-  let defineSections = function (sectionsList) {
-    let activeSection = sectionsList.filter(".section__active")
-    return {
-      activeSection: activeSection,
-      nextSection: activeSection.next(),
-      prevSection: activeSection.prev()
-    };
-  };
+//   let defineSections = function (sectionsList) {
+//     let activeSection = sectionsList.filter(".section__active")
+//     return {
+//       activeSection: activeSection,
+//       nextSection: activeSection.next(),
+//       prevSection: activeSection.prev()
+//     };
+//   };
 
-  let scrollToSection = function (direction) {
-    let section = defineSections(sections);
-    if (direction === 'up' && section.nextSection.length) {
-      performTransition(section.nextSection.index());
-    }
+//   let scrollToSection = function (direction) {
+//     let section = defineSections(sections);
+//     if (direction === 'up' && section.nextSection.length) {
+//       performTransition(section.nextSection.index());
+//     }
 
-    if (direction === 'down' && section.prevSection.length) {
-      performTransition(section.prevSection.index());
-    }
-  };
+//     if (direction === 'down' && section.prevSection.length) {
+//       performTransition(section.prevSection.index());
+//     }
+//   };
 
 
-  $(".wrapper").on({
-    wheel: function (e) {
-      const deltaY = e.originalEvent.deltaY;
-      const direction = deltaY > 0 ? "up" : "down";
-      scrollToSection(direction);
-    }
-  })
+//   $(".wrapper").on({
+//     wheel: function (e) {
+//       const deltaY = e.originalEvent.deltaY;
+//       const direction = deltaY > 0 ? "up" : "down";
+//       scrollToSection(direction);
+//     }
+//   })
 
-  $("[data-scroll-to]").on('click', e => {
-    e.preventDefault();
-    performTransition(parseInt($(e.target).data("scroll-to")));
-  })
-}
+//   $("[data-scroll-to]").on('click', e => {
+//     e.preventDefault();
+//     performTransition(parseInt($(e.target).data("scroll-to")));
+//   })
+// }
 
-OnePageScroll();
+// OnePageScroll();
 
 //*******************YANDEX MAP****************** */
 
 ymaps.ready(init);
+
+var placemarks = [
+  {
+    latitude: 59.97,
+    longitude: 30.31,
+    hitContent: 'Санкт-Петербург, Ул. Литераторов, 18',
+    balloonContent: 'Санкт-Петербург, Ул. Литераторов, 18'
+
+  },
+  {
+    latitude: 59.93,
+    longitude: 30.45,
+    hitContent: 'Виленский пер., 15, Санкт-Петербург, Россия',
+    balloonContent: 'Виленский пер., 15, Санкт-Петербург, Россия'
+  },
+  {
+    latitude: 59.91,
+    longitude: 30.34,
+    hitContent: 'Лиговский просп., 174, Санкт-Петербург, Россия',
+    balloonContent: 'Лиговский просп., 174, Санкт-Петербург, Россия'
+  },
+  {
+    latitude: 59.93,
+    longitude: 30.24,
+    hitContent: 'Среднегаванский просп., 13, Санкт-Петербург, Россия',
+    balloonContent: 'Среднегаванский просп., 13, Санкт-Петербург, Россия'
+  }
+];
 function init() {
   var map = new ymaps.Map('map', {
     center: [59.94, 30.32],
@@ -442,10 +470,107 @@ function init() {
     controls: ['zoomControl'],
     behaviors: ['drag']
   });
-  var placemark = new ymaps.Placemark([59.97, 30.31],{
-    hitContent: 'Это хинт',
-    balloonContent: 'Это балун'
-  })
-  map.geoObjects.add(placemark);
+
+  placemarks.forEach(function (obj) {
+    var placemark = new ymaps.Placemark([obj.latitude, obj.longitude], {
+      hitContent: obj.hitContent,
+      balloonContent: obj.balloonContent
+    },
+      {
+        iconLayout: 'default#image',
+        iconImageHref: '../img/icons/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+      });
+    map.geoObjects.add(placemark);
+  });
+
 }
+
+////*************************SABANTSEV PAGE SCROLL******** */
+
+
+const sections = $('.section');
+const display = $('.content');
+let inscroll = false;
+
+const switchActiveClassSideMenu = menuItemIndex => {
+  $(".scroller__item")
+    .eq(menuItemIndex)
+    .addClass("scroller__item--active")
+    .siblings()
+    .removeClass("scroller__item--active")
+}
+
+let performTransition = function (sectionEq) {
+
+  if (inscroll) return
+  inscroll = true;
+
+  const position = `${sectionEq * -100}%`;
+  sections
+    .eq(sectionEq)
+    .addClass('section__active')
+    .siblings()
+    .removeClass('section__active');
+  display.css({
+    transform: `translateY(${position})`
+  });
+
+  setTimeout(() => {
+    switchActiveClassSideMenu(sectionEq);
+    inscroll = false
+  }, 1300); //transition duration (1000) + transition innertion delay (300)
+
+};
+
+let scrollToSection = function (direction) {
+  const activeSection = sections.filter('.section__active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  if (direction === 'next' && nextSection.length) {
+    performTransition(nextSection.index());
+  }
+  if (direction === 'prev' && prevSection.length) {
+    performTransition(prevSection.index());
+  }
+}
+
+$('.wrapper').on('wheel', e => {
+  const deltaY = e.originalEvent.deltaY;
+
+  if (deltaY > 0) {
+    scrollToSection('next');
+  }
+  if (deltaY < 0) {
+    scrollToSection('prev');
+  }
+});
+
+$(document).on("keydown", e => {
+  switch (e.keyCode) {
+    case 40: scrollToSection('next');
+      break;
+    case 38: scrollToSection('prev');
+      break;
+  }
+})
+
+$("[data-scroll-to]").on('click', e => {
+  e.preventDefault();
+
+  const target = $(e.currentTarget).attr('data-scroll-to');
+  performTransition(target);
+})
+
+$(window).swipe({
+  swipe: function(event, direction, distance, duration, fingerCount, fingerData){
+    const nextOrPrev = direction === 'up' ? 'next' :'prev';
+    scrollToSection(nextOrPrev);
+  }
+
+})
+
+
 
