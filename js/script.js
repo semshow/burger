@@ -493,7 +493,8 @@ function init() {
 const sections = $('.section');
 const display = $('.content');
 let inscroll = false;
-
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
 const switchActiveClassSideMenu = menuItemIndex => {
   $(".scroller__item")
     .eq(menuItemIndex)
@@ -537,16 +538,16 @@ let scrollToSection = function (direction) {
   }
 }
 
-$('.wrapper').on('wheel', e => {
-  const deltaY = e.originalEvent.deltaY;
 
-  if (deltaY > 0) {
-    scrollToSection('next');
-  }
-  if (deltaY < 0) {
-    scrollToSection('prev');
-  }
-});
+$('.wrapper').on({
+  wheel: e => {
+    const deltaY = e.originalEvent.deltaY;
+    const direction = deltaY > 0 ? "next" : "prev";
+
+    scrollToSection(direction);
+  }, touchmove: e=> e.preventDefault()
+})
+
 
 $(document).on("keydown", e => {
   switch (e.keyCode) {
@@ -564,13 +565,16 @@ $("[data-scroll-to]").on('click', e => {
   performTransition(target);
 })
 
-$(window).swipe({
-  swipe: function(event, direction, distance, duration, fingerCount, fingerData){
-    const nextOrPrev = direction === 'up' ? 'next' :'prev';
-    scrollToSection(nextOrPrev);
-  }
+if (isMobile) {
+  $(window).swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      const nextOrPrev = direction === 'up' ? 'next' : 'prev';
+      scrollToSection(nextOrPrev);
+    }
+  })
+}
 
-})
+
 
 
 
