@@ -64,6 +64,12 @@
           </div>
         </a>
       </li>
+      <li class="scroller__item">
+        <a href="#" class="scroller__link" data-scroll-to="8">
+          <div class="scroller__link-circle">
+          </div>
+        </a>
+      </li>
 
 
     </ul>
@@ -111,13 +117,13 @@
                     </a>
                   </li>
                   <li class="header__menu-item">
-                    <a href="#" class="header__menu-link" data-scroll-to="7">
+                    <a href="#" class="header__menu-link" data-scroll-to="8">
                       Контакты
                     </a>
                   </li>
                 </ul>
               </nav>
-              <a href="#" class="btn header__order-btn" data-scroll-to="6">
+              <a href="#" class="btn header__order-btn" data-scroll-to="7">
                 Заказать
               </a>
 
@@ -719,6 +725,43 @@
           </ll>
         </ul>
       </section>
+      <section class="section video">
+
+        <div class="video__title">
+          <h2 class="title title--video">как мы работаем</h2>
+        </div>
+        <div class="video__player">
+          <div class="video__player-screen">
+            <div id="yt__player"></div>
+            <div class="video__player-splash">
+              <div class="video__player-splashbutton">
+                <img class="video__player--splashpic" src="img/icons/video__play.png" alt="play">
+              </div>
+            </div>
+          </div>
+          <div class="video__player-controls">
+            <div class="controls__play">
+              <button class="player__start"></button>
+            </div>
+            <div class="video__playback">
+              <div class="player__playback">
+                <button class="player__playback-button"></button>
+              </div>
+            </div>
+            <div class="video__sound">
+              <div class="video__sound-img" id="mute-toggle">
+                <img class="video__sound-pic" src="img/icons/volume.png" alt="sound">
+              </div>
+              <input type="range" class="video__sound-range">
+            </div>
+
+            <!-- <div class="player__duration">
+              <span class="player__duration-completed">0:00</span> :
+              <span class="player__duration-estimate">0:00</span>
+            </div> -->
+          </div>
+        </div>
+      </section>
 
       <section class="section order">
         <div class="container container--form">
@@ -856,6 +899,7 @@
     type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="js/script.js"></script>
 
   <script type="template" id="overlay1">

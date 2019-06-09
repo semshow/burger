@@ -360,77 +360,7 @@ const overlay = (function () {
 })();
 
 
-//*****************ONE PAGE SCROLL */
 
-
-// var md = new MobileDetect(window.navigator.userAgent),
-// isMobile = md.mobile();
-
-// let OnePageScroll = function () {
-//   const sections = $('.section');
-//   const visible = $('#content');
-//   let inscroll = false;
-
-//   let performTransition = function (sectionEq) {
-
-//     if (!inscroll) {
-//       inscroll = true;
-//       let position = sectionEq * -100 + '%';
-
-//       sections.eq(sectionEq).addClass('section__active').siblings().removeClass('section__active');
-
-//       visible.css({
-//         transform: `translateY(${position}`,
-//         "-webkit-transform": `translateY(${position})`
-//       });
-
-//       setTimeout(function () {
-//         inscroll = false;
-//         $(".scroller__link")
-//           .eq(sectionEq)
-//           .addClass("scroller__link--active")
-//           .siblings()
-//           .removeClass("scroller__link--active");
-//       }, 1000);
-//     }
-//   }
-
-//   let defineSections = function (sectionsList) {
-//     let activeSection = sectionsList.filter(".section__active")
-//     return {
-//       activeSection: activeSection,
-//       nextSection: activeSection.next(),
-//       prevSection: activeSection.prev()
-//     };
-//   };
-
-//   let scrollToSection = function (direction) {
-//     let section = defineSections(sections);
-//     if (direction === 'up' && section.nextSection.length) {
-//       performTransition(section.nextSection.index());
-//     }
-
-//     if (direction === 'down' && section.prevSection.length) {
-//       performTransition(section.prevSection.index());
-//     }
-//   };
-
-
-//   $(".wrapper").on({
-//     wheel: function (e) {
-//       const deltaY = e.originalEvent.deltaY;
-//       const direction = deltaY > 0 ? "up" : "down";
-//       scrollToSection(direction);
-//     }
-//   })
-
-//   $("[data-scroll-to]").on('click', e => {
-//     e.preventDefault();
-//     performTransition(parseInt($(e.target).data("scroll-to")));
-//   })
-// }
-
-// OnePageScroll();
 
 //*******************YANDEX MAP****************** */
 
@@ -545,7 +475,7 @@ $('.wrapper').on({
     const direction = deltaY > 0 ? "next" : "prev";
 
     scrollToSection(direction);
-  }, touchmove: e=> e.preventDefault()
+  }, touchmove: e => e.preventDefault()
 })
 
 
@@ -574,7 +504,105 @@ if (isMobile) {
   })
 }
 
+//************VIDEOPLAYER */
 
+let player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt__player', {
+    height: '405',
+    width: '660',
+    videoId: 'M7lc1UVf-VE',
+    playerVars: {
+      controls: 0,
+      disablekb: 0,
+      showinfo: 0,
+      rel: 0,
+      autoplay: 0,
+      modestbranding: 0
+    },
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
 
+function onPlayerStateChange(event) {
+  const playerButton = $('.player__start');
+  switch (event.data) {
+    case 1:
+      $('.video__player-screen').addClass('splash__active');
+      playerButton.addClass('paused');
+      break;
+    case 2:
+      playerButton.removeClass('paused');
+      break;
+  }
+}
 
+function onPlayerReady() {
+  const videoDurationInSeconds = player.getDuration();
+
+  let interval;
+  clearInterval(interval);
+
+  interval = setInterval(() => {
+    const completedSeconds = player.getCurrentTime();
+    const percent = (completedSeconds / videoDurationInSeconds) * 100;
+    $('.player__playback-button').css({
+      left: `${percent}%`
+    })
+    $('.player__duration-completed').text(formatTime(completedSeconds))
+  }, 1000);
+
+  $('.player__duration-estimate').text(formatTime(videoDurationInSeconds));
+}
+
+function formatTime(time) {
+  const roundTime = Math.round(time);
+  const minutes = Math.floor(roundTime / 60);
+  const seconds = roundTime - minutes * 60;
+  const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+  return `${minutes}:${formattedSeconds}`;
+}
+
+$(".player__start").on('click', e => {
+  const btn = $(e.currentTarget);
+
+  if (btn.hasClass('paused')) {
+    player.pauseVideo();
+  } else {
+    player.playVideo();
+  }
+})
+
+$('.player__playback').on('click', e => {
+  e.preventDefault();
+
+  const bar = $(e.currentTarget);
+  const newButtonPosition = e.pageX - bar.offset().left;
+  const clickedPercent = (newButtonPosition / bar.width()) * 100;
+  const newPlayerTime = (player.getDuration() / 100) * clickedPercent;
+  $('.player__playback-button').css({
+    left: `${clickedPercent}%`
+  })
+  player.seekTo(newPlayerTime);
+})
+
+$('.video__player-splash').on('click', e => {
+  player.playVideo();
+})
+
+$('#mute-toggle').on('click', function() {
+  if(player.isMuted()){
+      player.unMute();
+  }
+  else{
+      player.mute();
+  }
+});
+
+$('.video__sound-range').on('change', function () {
+  player.setVolume($(this).val());
+});
 

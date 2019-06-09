@@ -153,6 +153,11 @@ footer {
     }
   }
 
+  &--video {
+    color: $gray;
+    margin-bottom: rem(50);
+  }
+
   &--slider {
     color: $white;
     line-height: 4.5rem;
