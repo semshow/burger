@@ -371,7 +371,7 @@ function init() {
     },
       {
         iconLayout: 'default#image',
-        iconImageHref: 'img/icons/map-marker.png',
+        iconImageHref: './img/icons/map-marker.png',
         iconImageSize: [46, 57],
         iconImageOffset: [-23, -57]
       });
