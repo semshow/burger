@@ -35,12 +35,12 @@ menu.openMenu();
 //***************************SLIDER */
 
 let sliderDrop = (function (details) {
-  let iconButton = document.querySelector('#sliderIcon');
+  let iconButton = document.querySelector('.slider__icon-include');
   let _toggleIcon = function (e) {
     iconButton.classList.toggle('slider__icon--active');
   }
 
-  let addIconListener = function () {
+  let addIconListener = function() {
     iconButton.addEventListener('mouseenter', _toggleIcon);
     iconButton.addEventListener('mouseleave', _toggleIcon);
   }

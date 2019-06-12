@@ -473,6 +473,7 @@ textareafocus {
   width: 1.5rem;
   border-radius: 0.3125rem;
   background-color: #ffffff;
+  margin-bottom: 0.25rem;
 }
 
 .header__hamburger-modal {
@@ -743,14 +744,18 @@ textareafocus {
           transform: translateY(-50%);
   left: -2.5rem;
   display: block;
-  width: 1.6875rem;
-  height: 0.8125rem;
 }
 
 @media screen and (max-width: 768px) {
   .slider__left {
     left: 0;
   }
+}
+
+.slider__arrow {
+  width: 1.5625rem;
+  height: 1.6875rem;
+  z-index: 100;
 }
 
 .slider__right {
@@ -760,8 +765,6 @@ textareafocus {
           transform: translateY(-50%);
   right: -2.5rem;
   display: block;
-  width: 1.6875rem;
-  height: 0.8125rem;
 }
 
 @media screen and (max-width: 768px) {
