@@ -32,7 +32,7 @@ let menu = (function (options) {
 })(obj);
 
 menu.openMenu();
-//***************************SLIDER */
+//***************************SLIDER DROP ICON */
 
 let sliderDrop = (function (details) {
   let iconButton = document.querySelector('.slider__icon-include');
@@ -167,43 +167,6 @@ let menuAccordeon = () => {
 menuAccordeon();
 
 
-///////////// slider
-
-// const slide = (function () {
-//   const left = document.querySelector('.slider__left');
-//   const right = document.querySelector('.slider__right');
-//   const slider = document.querySelector('.slider__list');
-//   const computed = getComputedStyle(slider);
-//   let sliderWidth = parseInt(computed.width);
-
-//   var sliderItemCounter = slider.children.length;
-
-//   let moveSlide = function (direction) {
-//     direction.addEventListener('click', function (e) {
-//       e.preventDefault();
-//       let currentRight = parseInt(computed.right);
-//       console.log(currentRight);
-
-//       if (currentRight < (sliderItemCounter - 1) * sliderWidth && direction == right) {
-//         slider.style.right = currentRight + sliderWidth + "px";
-//         console.log(slider.style.right);
-//       }
-
-//       if (currentRight > 0 && direction == left) {
-//         slider.style.right = currentRight - sliderWidth + "px";
-//       }
-//     });
-//   }
-
-//   let addListeners = function () {
-//     moveSlide(right);
-//     moveSlide(left);
-//   }
-
-//   return { init: addListeners }
-// })();
-
-// slide.init();
 
 
 ///********************SLIDER JQUERY */
@@ -408,7 +371,7 @@ function init() {
     },
       {
         iconLayout: 'default#image',
-        iconImageHref: '../img/icons/map-marker.png',
+        iconImageHref: 'img/icons/map-marker.png',
         iconImageSize: [46, 57],
         iconImageOffset: [-23, -57]
       });
