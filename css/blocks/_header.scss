@@ -72,6 +72,9 @@
   color: $white;
   text-transform: uppercase;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .header__order-btn {

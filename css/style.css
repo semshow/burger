@@ -427,6 +427,10 @@ textareafocus {
   text-decoration: none;
 }
 
+.header__menu-link:hover {
+  text-decoration: underline;
+}
+
 .header__order-btn {
   margin-left: 0.4375rem;
 }

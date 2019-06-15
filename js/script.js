@@ -34,15 +34,20 @@ let menu = (function (options) {
 menu.openMenu();
 //***************************SLIDER DROP ICON */
 
-let sliderDrop = (function (details) {
-  let iconButton = document.querySelector('.slider__icon-include');
-  let _toggleIcon = function (e) {
-    iconButton.classList.toggle('slider__icon--active');
-  }
 
-  let addIconListener = function() {
-    iconButton.addEventListener('mouseenter', _toggleIcon);
-    iconButton.addEventListener('mouseleave', _toggleIcon);
+
+let sliderDrop = (function () {
+  let iconButton = document.querySelectorAll('.slider__icon-include');
+
+  let addIconListener = function () {
+    iconButton.forEach(function (elem) {
+      elem.addEventListener('mouseenter', e => {
+        e.target.classList.toggle('slider__icon--active');
+      });
+      elem.addEventListener('mouseleave', e => {
+        e.target.classList.toggle('slider__icon--active');
+      });
+    })
   }
 
   return {
@@ -52,7 +57,7 @@ let sliderDrop = (function (details) {
 
 sliderDrop.iconHover();
 
-//********************аккордеон костыль************
+//********************Menu accordion************
 
 let teamAccordeon = () => {
   let teamList = document.querySelector('.team__accordeon');
@@ -77,59 +82,7 @@ let teamAccordeon = () => {
 
 teamAccordeon();
 
-
-//***************************аккордеон норм *****************
-
-// let teamAccordeon = () => {
-//   let accordeonLink = document.querySelectorAll('.accordeon__link');
-//   accordeonLink.forEach(function (personName) {
-//     personName.addEventListener('click', function (e) {
-//       e.preventDefault();
-//       let activePerson = document.querySelector('.accordeon__item.accordeon__item--active');
-//       if (activePerson) {
-//         let accordeonContent = activePerson.querySelector('.accordeon__item-description');
-//         accordeonContent.style.height = "0px";
-//         activePerson.classList.remove('accordeon__item--active');
-//       }
-
-//       if (!activePerson || activePerson.querySelector('accordeon__link') !== e.target) {
-//         let currentPerson = e.target.closest('.accordeon__item');
-//         currentPerson.classList.add('accordeon__item--active');
-//         let currentPersonInfo = currentPerson.querySelector('.accordeon__item-description');
-//         currentPersonInfo.style.height = currentPersonInfo.scrollHeight + 'px';
-//       }
-//     })
-//   })
-// }
-
-// teamAccordeon();
-
-
-//////Аккордеон Мелюков
-
-// const element = document.querySelector(".team__accordeon");
-
-// createAccordeon(element);
-
-// function createAccordeon(element) {
-//   let lastActive;
-
-//   // element.classList.add("accordeon");
-//   element.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     if (e.target.classList.contains("accordeon__link")) {
-//       if (lastActive) {
-//         lastActive.classList.remove("accordeon__item--active");
-//       }
-
-//       lastActive = e.target.parentNode;
-//       lastActive.classList.add("accordeon__item--active");
-//     }
-//   });
-// }
-
-
-///////////////////////Меню аккордеон
+///////////////////////Menu accordion
 
 let menuAccordeon = () => {
 
@@ -323,42 +276,40 @@ const overlay = (function () {
 })();
 
 
-
-
 //*******************YANDEX MAP****************** */
 
 ymaps.ready(init);
 
 var placemarks = [
   {
-    latitude: 59.97,
-    longitude: 30.31,
-    hitContent: 'Санкт-Петербург, Ул. Литераторов, 18',
-    balloonContent: 'Санкт-Петербург, Ул. Литераторов, 18'
+    latitude: 51.51,
+    longitude: -0.12,
+    hitContent: '91 Western Road, Brighton, East Sussex, England, BN1 2NW',
+    balloonContent: '91 Western Road, Brighton, East Sussex, England, BN1 2NW'
 
   },
   {
-    latitude: 59.93,
-    longitude: 30.45,
-    hitContent: 'Виленский пер., 15, Санкт-Петербург, Россия',
-    balloonContent: 'Виленский пер., 15, Санкт-Петербург, Россия'
+    latitude: 51.51, 
+    longitude: -0.14,
+    hitContent: '91 Western Road, Brighton, East Sussex, England, BN1 2NW',
+    balloonContent: '91 Western Road, Brighton, East Sussex, England, BN1 2NW'
   },
   {
-    latitude: 59.91,
-    longitude: 30.34,
-    hitContent: 'Лиговский просп., 174, Санкт-Петербург, Россия',
-    balloonContent: 'Лиговский просп., 174, Санкт-Петербург, Россия'
+    latitude: 50.52, 
+    longitude: -0.13,
+    hitContent: '91 Western Road, Brighton, East Sussex, England, BN1 2NW',
+    balloonContent: '91 Western Road, Brighton, East Sussex, England, BN1 2NW'
   },
   {
-    latitude: 59.93,
-    longitude: 30.24,
-    hitContent: 'Среднегаванский просп., 13, Санкт-Петербург, Россия',
-    balloonContent: 'Среднегаванский просп., 13, Санкт-Петербург, Россия'
+    latitude: 51.505999,
+    longitude: -0.126177,
+    hitContent: '91 Western Road, Brighton, East Sussex, England, BN1 2NW',
+    balloonContent: '91 Western Road, Brighton, East Sussex, England, BN1 2NW'
   }
 ];
 function init() {
   var map = new ymaps.Map('map', {
-    center: [59.94, 30.32],
+    center: [51.517541, -0.102396], 
     zoom: 12,
     controls: ['zoomControl'],
     behaviors: ['drag']
@@ -556,12 +507,12 @@ $('.video__player-splash').on('click', e => {
   player.playVideo();
 })
 
-$('#mute-toggle').on('click', function() {
-  if(player.isMuted()){
-      player.unMute();
+$('#mute-toggle').on('click', function () {
+  if (player.isMuted()) {
+    player.unMute();
   }
-  else{
-      player.mute();
+  else {
+    player.mute();
   }
 });
 
